@@ -2,16 +2,22 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import List, Optional, Dict
 import uvicorn
+import os
+from pathlib import Path
 
 from ingest import MarkdownIngester
 from process import TextProcessor
 from embed import EmbeddingGenerator
 from store import VectorStore
 
+# Get the project root directory (one level up from src)
+PROJECT_ROOT = Path(__file__).parent.parent
+DATA_DIR = PROJECT_ROOT / "data"
+
 app = FastAPI(title="Military Documents RAG API")
 
 # Initialize components
-ingester = MarkdownIngester("data")
+ingester = MarkdownIngester(str(DATA_DIR))
 processor = TextProcessor()
 embedder = EmbeddingGenerator()
 vector_store = VectorStore()
@@ -53,11 +59,21 @@ async def ingest_documents():
     try:
         # Pipeline execution
         documents = ingester.load_markdown_files()
+
+        if not documents:
+            raise HTTPException(
+                status_code=400,
+                detail="No markdown files found in data directory"
+            )
+
         cleaned_documents = processor.clean_text(documents)
         documents_with_embeddings = embedder.generate_embeddings(cleaned_documents)
         vector_store.store_documents(documents_with_embeddings)
 
-        return {"status": "success", "message": "Documents ingested successfully"}
+        return {
+            "status": "success",
+            "message": f"Successfully ingested {len(documents)} documents"
+        }
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
