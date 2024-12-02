@@ -1,0 +1,11 @@
+markdown_rag/
+├── data/                 # Your markdown files go here
+├── src/
+│   ├── __init__.py
+│   ├── ingest.py        # Markdown parsing
+│   ├── process.py       # Text cleaning
+│   ├── embed.py         # Embedding generation
+│   ├── store.py         # Vector storage
+│   └── main.py          # Main execution script
+├── requirements.txt
+└── README.md
