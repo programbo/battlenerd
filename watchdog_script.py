@@ -13,16 +13,21 @@ class ChangeHandler(FileSystemEventHandler):
     def restart_process(self):
         if self.process:
             self.process.terminate()
+        print("\nRestarting server...")
         self.process = subprocess.Popen(self.command, shell=True)
 
     def on_modified(self, event):
         if event.src_path.endswith('.py'):
-            print(f"Detected change in {event.src_path}, restarting server...")
+            print(f"Detected change in {event.src_path}")
             self.restart_process()
 
 if __name__ == "__main__":
     path = os.path.dirname(os.path.abspath(__file__))
-    command = "python src/api.py"
+    command = "python src/main.py"
+
+    # Optional: Add --init flag on first run
+    # command = "python src/main.py --init"
+
     event_handler = ChangeHandler(command)
     observer = Observer()
     observer.schedule(event_handler, path, recursive=True)
