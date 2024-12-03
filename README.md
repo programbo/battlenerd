@@ -1,11 +1,10 @@
-# Military Documents RAG API
+# Battlenerd
 
 ## Description
 
-The Military Documents RAG API is a FastAPI-based application designed to
-ingest, process, and query military documents stored in markdown format. It
-leverages a Retrieval-Augmented Generation (RAG) approach to provide relevant
-document sections based on user queries.
+A FastAPI-based application designed to ingest, process, and query documents
+stored in markdown format. It leverages a Retrieval-Augmented Generation (RAG)
+approach to provide relevant document sections based on user queries.
 
 ## Usage
 
