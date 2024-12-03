@@ -21,6 +21,14 @@ class EmbeddingGenerator:
                         numerator, denominator = map(int, section["confidence"].split("/"))
                         section["confidence_score"] = numerator / denominator
                     except (ValueError, AttributeError):
-                        section["confidence_score"] = None
-
+                        section["confidence_score"] = 0
         return documents
+    
+    def generate_report_embeddings(self, reports: List[Dict[str, str]]) -> List[Dict]:
+        for report in reports:
+            # generate embeddings for each report
+            # combine report type and content for better context
+            text = f"{report['type']}: {report['content']}"
+            embedding = self.model.encode(text)
+            report["embedding"] = embedding
+        return reports

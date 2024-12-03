@@ -1,11 +1,10 @@
-from fastapi import FastAPI, HTTPException, Body
-from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel, Field, validator
-from typing import List, Optional, Dict, Union
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel, Field
+from typing import List, Optional, Dict
 import uvicorn
 import os
 from pathlib import Path
-import tempfile
+from typing import Union
 
 from ingest import MarkdownIngester
 from process import TextProcessor
@@ -24,8 +23,12 @@ print(f"Contents of data directory:")
 for item in DATA_DIR.glob("*"):
     print(f"- {item.name}")
 
+# Initialize with Path object instead of string
+ingester = MarkdownIngester(DATA_DIR)  # Try without str() conversion
+
+app = FastAPI(title="Military Documents RAG API")
+
 # Initialize components
-ingester = MarkdownIngester(DATA_DIR)
 processor = TextProcessor()
 embedder = EmbeddingGenerator()
 vector_store = VectorStore()
@@ -35,40 +38,41 @@ class QueryRequest(BaseModel):
     n_results: Optional[int] = 5
     min_confidence: Optional[float] = 0.0
 
-    @validator('min_confidence')
-    def validate_confidence(cls, v):
-        if not 0 <= v <= 1:
-            raise ValueError('min_confidence must be between 0 and 1')
-        return v
-
-    @validator('n_results')
-    def validate_n_results(cls, v):
-        if v < 1:
-            raise ValueError('n_results must be greater than 0')
-        return v
-
 class QueryResponse(BaseModel):
     results: List[str]
     metadata: List[Dict]
 
-class Document(BaseModel):
-    content: str
-    filename: str
-    source: Optional[str] = None
+class Locstat(BaseModel):
+    call_sign: str = Field(..., example="A12")
+    grid_reference: str = Field(...)
+    status: str = Field(...)
+    additional_remarks: str = Field(...)
 
-class IngestRequest(BaseModel):
-    documents: List[Document] = Field(..., description="List of documents to ingest")
+class Casevac(BaseModel):
+    call_sign: str = Field(...)
+    pick_up_point: str = Field(...)
+    number_casualties_lying: str = Field(...)
+    number_casualties_walking: str = Field(...)
+    nature_of_injuries: str = Field(...)
+    priority: str = Field(...)
+    requirements_for_specialist_equipment: str = Field(...)
+    call_sign_and_frequency: str = Field(...)
+    hoist_requirements: str = Field(...)
+    additional_remarks: str = Field(...)
 
-app = FastAPI(title="Military Documents RAG API")
+class Sitrep(BaseModel):
+    call_sign: str = Field(...)
+    grid_reference: str = Field(...)
+    status: str = Field(...)
+    strength: str = Field(...)
+    morale: str = Field(...)
+    rations: str = Field(...)
+    water: str = Field(...)
+    additional_remarks: str = Field(...)
 
-# Configure CORS
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Your React app's URL
-    allow_credentials=True,
-    allow_methods=["*"],  # Allows all methods
-    allow_headers=["*"],  # Allows all headers
-)
+class Report(BaseModel):
+    type: str
+    content: Union[Locstat]
 
 @app.post("/query", response_model=QueryResponse)
 async def query_documents(request: QueryRequest):
@@ -77,90 +81,31 @@ async def query_documents(request: QueryRequest):
     Optionally filter by confidence score and limit number of results.
     """
     try:
-        # Check if vector store is empty
-        if vector_store.collection.count() == 0:
-            raise HTTPException(
-                status_code=404,
-                detail="No documents found in vector store. Please ingest documents first."
-            )
-
         results = vector_store.query(
             query_text=request.query,
             n_results=request.n_results,
             min_confidence=request.min_confidence
         )
-
-        if not results['documents'][0]:
-            return QueryResponse(results=[], metadata=[])
-
         return QueryResponse(
-            results=results['documents'][0],
-            metadata=results['metadatas'][0]
+            results=results['documents'][0],  # First query's results
+            metadata=results['metadatas'][0]  # First query's metadata
         )
-    except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Query failed: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
 
-@app.post("/ingest", response_model=Dict[str, str])
-async def ingest_documents(request: IngestRequest):
+@app.post("/ingest")
+async def ingest_documents():
     """
-    Ingest one or more documents provided in the request body.
-    """
-    try:
-        if not request.documents:
-            raise HTTPException(
-                status_code=400,
-                detail="No documents provided in request"
-            )
-
-        documents = [{
-            "content": doc.content,
-            "filename": doc.filename,
-            "source": doc.source or f"api_upload/{doc.filename}"
-        } for doc in request.documents]
-
-        try:
-            cleaned_documents = processor.clean_text(documents)
-        except Exception as e:
-            raise HTTPException(
-                status_code=400,
-                detail=f"Failed to process documents: {str(e)}"
-            )
-
-        documents_with_embeddings = embedder.generate_embeddings(cleaned_documents)
-        vector_store.store_documents(documents_with_embeddings)
-
-        return {
-            "status": "success",
-            "message": f"Successfully ingested {len(documents)} documents"
-        }
-    except HTTPException:
-        raise
-    except Exception as e:
-        raise HTTPException(
-            status_code=500,
-            detail=f"Ingestion failed: {str(e)}"
-        )
-
-@app.post("/ingest/files", response_model=Dict[str, str])
-async def ingest_from_files():
-    """
-    Ingest documents from the data directory on disk.
+    Trigger reingestion of documents from the data directory.
     """
     try:
         print(f"Starting ingestion from: {ingester.data_dir}")
         documents = ingester.load_markdown_files()
         print(f"Found {len(documents)} documents")
-
         if not documents:
             print("No documents found. Directory contents:")
             for item in Path(ingester.data_dir).glob("*"):
                 print(f"- {item.name}")
-            return {
-                "status": "warning",
-                "message": "No documents found in data directory"
-            }
 
         cleaned_documents = processor.clean_text(documents)
         documents_with_embeddings = embedder.generate_embeddings(cleaned_documents)
@@ -168,7 +113,22 @@ async def ingest_from_files():
 
         return {
             "status": "success",
-            "message": f"Successfully ingested {len(documents)} documents from files"
+            "message": f"Successfully ingested {len(documents)} documents"
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/ingest/report")
+async def ingest_report(report: Report):
+    """
+    Ingests a new report into chromadb
+    """
+    try:
+        reports_with_embeddings = embedder.generate_report_embeddings([report.model_dump()])
+        vector_store.store_report(reports_with_embeddings)
+        return {
+            "status" : "success",
+            "message" : "Successfully ingested report"
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
@@ -191,7 +151,7 @@ async def reset():
         return {"status": "success"}
     except ValueError:
         return {"status": "error collection does not exist"}
-
+    
 def start_server():
     """
     Start the FastAPI server using uvicorn.
