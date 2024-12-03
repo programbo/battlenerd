@@ -1,4 +1,4 @@
-# Battlenerd
+# Document RAG API
 
 ## Description
 
@@ -57,9 +57,14 @@ starting the server.
    pip install -r requirements.txt
    ```
 
-4. Start the FastAPI server:
+4. Start the server:
+
    ```bash
-   python src/api.py
+   # Normal start
+   python src/main.py
+
+   # Start with initial data ingestion
+   python src/main.py --init
    ```
 
 ## Development
