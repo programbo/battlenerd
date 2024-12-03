@@ -56,7 +56,7 @@ class VectorStore:
         embeddings = []
         texts = []
         metadatas = []
-    
+
         for report in reports:
             # create an id based on the timestamp
             report_id = datetime.now().strftime('%Y%m%d%H%M%S%f')
@@ -75,7 +75,7 @@ class VectorStore:
                 "confidence" : "5/5"
             }
             metadatas.append(metadata)
-        
+
         self.collection.add(
             ids=ids,
             embeddings=embeddings,
@@ -90,3 +90,19 @@ class VectorStore:
             where={"confidence_score": {"$gte": min_confidence}} if min_confidence > 0 else None
         )
         return results
+
+    def clear(self) -> None:
+        """
+        Clears all documents from the vector store by deleting and recreating the collection.
+        """
+        try:
+            self.client.delete_collection("markdown_documents")
+        except ValueError:
+            # Collection might not exist, that's okay
+            pass
+
+        # Recreate the collection with the same settings
+        self.collection = self.client.create_collection(
+            name="markdown_documents",
+            metadata={"hnsw:space": "cosine"}
+        )
