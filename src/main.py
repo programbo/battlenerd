@@ -32,7 +32,6 @@ def ingest_documents():
 def main():
     parser = argparse.ArgumentParser(description='Military Documents RAG System')
     parser.add_argument('--init', action='store_true', help='Injest initial training data')
-    // TODO: Add a reset flag
     args = parser.parse_args()
 
     if args.init:
