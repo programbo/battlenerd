@@ -6,6 +6,7 @@ import os
 from pathlib import Path
 from typing import Union
 from collections import Counter
+from fastapi.middleware.cors import CORSMiddleware
 
 from ingest import MarkdownIngester
 from process import TextProcessor
@@ -17,17 +18,19 @@ import chromadb
 PROJECT_ROOT = Path(__file__).parent.parent
 DATA_DIR = PROJECT_ROOT / "data"
 
-# Debug info
-print(f"Data directory exists: {DATA_DIR.exists()}")
-print(f"Data directory path: {DATA_DIR}")
-print(f"Contents of data directory:")
-for item in DATA_DIR.glob("*"):
-    print(f"- {item.name}")
-
 # Initialize with Path object instead of string
 ingester = MarkdownIngester(DATA_DIR)  # Try without str() conversion
 
 app = FastAPI(title="Military Documents RAG API")
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins, change this to specific domains in production
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods (GET, POST, etc.)
+    allow_headers=["*"],  # Allows all headers
+)
 
 # Initialize components
 processor = TextProcessor()
@@ -75,6 +78,14 @@ class Report(BaseModel):
     type: str
     content: Union[Locstat]
 
+class IngestDocument(BaseModel):
+    content: str
+    filename: str
+    source: str
+
+class IngestRequest(BaseModel):
+    documents: List[IngestDocument]
+
 @app.post("/query", response_model=QueryResponse)
 async def query_documents(request: QueryRequest):
     """
@@ -95,18 +106,33 @@ async def query_documents(request: QueryRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.post("/ingest")
-async def ingest_documents():
+async def ingest_documents(request: Optional[IngestRequest] = None):
     """
-    Trigger reingestion of documents from the data directory.
+    Ingest documents either from request body or data directory.
+    If request body is provided, ingest those documents.
+    If no request body, load and ingest documents from data directory.
     """
     try:
-        print(f"Starting ingestion from: {ingester.data_dir}")
-        documents = ingester.load_markdown_files()
-        print(f"Found {len(documents)} documents")
-        if not documents:
-            print("No documents found. Directory contents:")
-            for item in Path(ingester.data_dir).glob("*"):
-                print(f"- {item.name}")
+        # Determine source of documents
+        if request and request.documents:
+            # Use documents from request body
+            documents = [{
+                "content": doc.content,
+                "filename": doc.filename,
+                "source": doc.source
+            } for doc in request.documents]
+            print(f"Processing {len(documents)} documents from request")
+        else:
+            # Load documents from data directory
+            print(f"Loading documents from: {ingester.data_dir}")
+            documents = ingester.load_markdown_files()
+            print(f"Found {len(documents)} documents in directory")
+
+            if not documents:
+                return {
+                    "status": "warning",
+                    "message": "No documents found in data directory"
+                }
 
         cleaned_documents = processor.clean_text(documents)
         documents_with_embeddings = embedder.generate_embeddings(cleaned_documents)
@@ -114,9 +140,11 @@ async def ingest_documents():
 
         return {
             "status": "success",
-            "message": f"Successfully ingested {len(documents)} documents"
+            "message": f"Ingested {len(documents)} documents from {'request' if request else 'files'}"
         }
     except Exception as e:
+        if isinstance(e, ValueError):
+            raise HTTPException(status_code=400, detail=str(e))
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.post("/ingest/report")
@@ -141,17 +169,14 @@ async def health_check():
     """
     return {"status": "healthy"}
 
-@app.get("/reset")
+@app.delete("/reset")
 async def reset():
     """
-    Deletes the collection from chromadb
+    Empties the collection from chromadb
     """
-    client = chromadb.PersistentClient(path="chroma_db")
-    try:
-        client.delete_collection("markdown_documents")
-        return {"status": "success"}
-    except ValueError:
-        return {"status": "error collection does not exist"}
+    global vector_store  # Use the global instance
+    vector_store.clear()
+    return {"status": "success"}
 
 @app.get("/stats")
 async def get_stats():
@@ -159,7 +184,6 @@ async def get_stats():
     Returns metadata about the contents of the vector store
     """
     try:
-        # Get all documents and metadata
         results = vector_store.collection.get()
 
         if not results or not results['metadatas']:
@@ -171,21 +195,32 @@ async def get_stats():
 
         metadatas = results['metadatas']
 
-        # Collect statistics
+        # Debug logging
+        print("Confidence scores in metadata:")
+        for m in metadatas:
+            print(f"confidence_score: {m.get('confidence_score')}, type: {type(m.get('confidence_score'))}")
+
+        # Calculate average confidence score - with additional error handling
+        confidence_scores = []
+        for m in metadatas:
+            score = m.get('confidence_score')
+            if score is not None and score != '':  # Skip empty strings
+                try:
+                    confidence_scores.append(float(score))
+                except ValueError as e:
+                    print(f"Failed to convert score: {score}, type: {type(score)}")
+                    continue
+
+        # Rest of the stats calculation
         stats = {
             "total_sections": len(metadatas),
             "unique_documents": len(set(m['filename'] for m in metadatas)),
             "confidence_levels": Counter(m['confidence'] for m in metadatas if m.get('confidence')),
             "sections_by_document": Counter(m['filename'] for m in metadatas),
             "sections_by_title": Counter(m['section_title'] for m in metadatas if m.get('section_title')),
-            "average_confidence": 0.0,
+            "average_confidence": sum(confidence_scores) / len(confidence_scores) if confidence_scores else 0.0,
             "sources": Counter(m['source_document'] for m in metadatas if m.get('source_document'))
         }
-
-        # Calculate average confidence score
-        confidence_scores = [m.get('confidence_score', 0) for m in metadatas]
-        if confidence_scores:
-            stats["average_confidence"] = sum(confidence_scores) / len(confidence_scores)
 
         return {
             "status": "success",
