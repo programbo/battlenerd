@@ -9,6 +9,7 @@ from ingest import MarkdownIngester
 from process import TextProcessor
 from embed import EmbeddingGenerator
 from store import VectorStore
+import chromadb
 
 # Get the project root directory (one level up from src)
 PROJECT_ROOT = Path(__file__).parent.parent
@@ -92,6 +93,18 @@ async def health_check():
     """
     return {"status": "healthy"}
 
+@app.get("/reset")
+async def reset():
+    """
+    Deletes the collection from chromadb
+    """
+    client = chromadb.PersistentClient(path="chroma_db")
+    try:
+        client.delete_collection("markdown_documents")
+        return {"status": "success"}
+    except ValueError:
+        return {"status": "error collection does not exist"}
+    
 def start_server():
     """
     Start the FastAPI server using uvicorn.
