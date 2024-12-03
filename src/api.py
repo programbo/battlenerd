@@ -38,7 +38,7 @@ class QueryRequest(BaseModel):
     min_confidence: Optional[float] = 0.0
 
 class QueryResponse(BaseModel):
-    results: List[Dict]
+    results: List[str]
     metadata: List[Dict]
 
 @app.post("/query", response_model=QueryResponse)
@@ -53,7 +53,6 @@ async def query_documents(request: QueryRequest):
             n_results=request.n_results,
             min_confidence=request.min_confidence
         )
-
         return QueryResponse(
             results=results['documents'][0],  # First query's results
             metadata=results['metadatas'][0]  # First query's metadata
