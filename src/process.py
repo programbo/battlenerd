@@ -43,7 +43,7 @@ class TextProcessor:
             elif current_section:
                 # Check for confidence ratings
                 conf_match = re.match(self.markdown_patterns["confidence"], line)
-                if conf_match:
+                if conf_match and sections:
                     sections[-1].confidence = conf_match.group(1)
                     sections[-1].source = conf_match.group(2)
                 else:

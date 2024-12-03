@@ -38,6 +38,9 @@ class VectorStore:
                     "confidence_score": section.get("confidence_score"),
                     "source_document": section.get("source")
                 }
+                for key, value in metadata.items():
+                    if value is None:
+                        metadata[key] = ""
                 metadatas.append(metadata)
 
         self.collection.add(
