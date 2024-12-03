@@ -38,8 +38,8 @@ def main():
 		print("Injesting initial training data...")
 		ingest_documents()
 
-		print("Starting API server...")
-		start_server()
+	print("Starting API server...")
+	start_server()
 
 if __name__ == "__main__":
 	main()
