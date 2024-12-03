@@ -1,4 +1,4 @@
-# Military Documents RAG API
+# Battlenerd
 
 ## Description
 
