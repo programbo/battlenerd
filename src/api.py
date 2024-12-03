@@ -6,6 +6,7 @@ import uvicorn
 import os
 from pathlib import Path
 import tempfile
+from collections import Counter
 
 from ingest import MarkdownIngester
 from process import TextProcessor
@@ -191,6 +192,51 @@ async def reset():
         return {"status": "success"}
     except ValueError:
         return {"status": "error collection does not exist"}
+
+@app.get("/stats")
+async def get_stats():
+    """
+    Returns metadata about the contents of the vector store
+    """
+    try:
+        # Get all documents and metadata
+        results = vector_store.collection.get()
+
+        if not results or not results['metadatas']:
+            return {
+                "status": "empty",
+                "message": "No documents in vector store",
+                "count": 0
+            }
+
+        metadatas = results['metadatas']
+
+        # Collect statistics
+        stats = {
+            "total_sections": len(metadatas),
+            "unique_documents": len(set(m['filename'] for m in metadatas)),
+            "confidence_levels": Counter(m['confidence'] for m in metadatas if m.get('confidence')),
+            "sections_by_document": Counter(m['filename'] for m in metadatas),
+            "sections_by_title": Counter(m['section_title'] for m in metadatas if m.get('section_title')),
+            "average_confidence": 0.0,
+            "sources": Counter(m['source_document'] for m in metadatas if m.get('source_document'))
+        }
+
+        # Calculate average confidence score
+        confidence_scores = [m.get('confidence_score', 0) for m in metadatas]
+        if confidence_scores:
+            stats["average_confidence"] = sum(confidence_scores) / len(confidence_scores)
+
+        return {
+            "status": "success",
+            "stats": stats
+        }
+
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to get stats: {str(e)}"
+        )
 
 def start_server():
     """

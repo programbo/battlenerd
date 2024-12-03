@@ -70,8 +70,14 @@ starting the server.
   - Returns most relevant sections
 
 - **GET /health**
+
   - Basic health check endpoint
   - Returns server status
+
+- **GET /stats**
+  - Returns metadata about vector store contents
+  - Includes document counts, confidence levels, and section statistics
+  - Useful for monitoring and debugging
 
 ## Installation
 
@@ -254,5 +260,52 @@ starting the server.
 ```json
 {
   "status": "healthy"
+}
+```
+
+### Stats Endpoint (/stats)
+
+**Success Response:**
+
+```json
+{
+  "status": "success",
+  "stats": {
+    "total_sections": 157,
+    "unique_documents": 11,
+    "confidence_levels": {
+      "5/5": 98,
+      "4/5": 45,
+      "3/5": 14
+    },
+    "sections_by_document": {
+      "olvana.md": 25,
+      "north_torbia.md": 22,
+      "sungzon.md": 18,
+      "operation_steel_sentinel.md": 15
+    },
+    "sections_by_title": {
+      "Military Capabilities": 11,
+      "Geographic Data": 11,
+      "Cyber Capabilities": 8,
+      "Economic Data": 7
+    },
+    "average_confidence": 0.89,
+    "sources": {
+      "Country Overview Document": 89,
+      "Military Capability Analysis": 45,
+      "Analysis": 23
+    }
+  }
+}
+```
+
+**Empty Store Response:**
+
+```json
+{
+  "status": "empty",
+  "message": "No documents in vector store",
+  "count": 0
 }
 ```
