@@ -14,10 +14,19 @@ from store import VectorStore
 PROJECT_ROOT = Path(__file__).parent.parent
 DATA_DIR = PROJECT_ROOT / "data"
 
+# Debug info
+print(f"Data directory exists: {DATA_DIR.exists()}")
+print(f"Data directory path: {DATA_DIR}")
+print(f"Contents of data directory:")
+for item in DATA_DIR.glob("*"):
+    print(f"- {item.name}")
+
+# Initialize with Path object instead of string
+ingester = MarkdownIngester(DATA_DIR)  # Try without str() conversion
+
 app = FastAPI(title="Military Documents RAG API")
 
 # Initialize components
-ingester = MarkdownIngester(str(DATA_DIR))
 processor = TextProcessor()
 embedder = EmbeddingGenerator()
 vector_store = VectorStore()
@@ -57,14 +66,13 @@ async def ingest_documents():
     Trigger reingestion of documents from the data directory.
     """
     try:
-        # Pipeline execution
+        print(f"Starting ingestion from: {ingester.data_dir}")
         documents = ingester.load_markdown_files()
-
+        print(f"Found {len(documents)} documents")
         if not documents:
-            raise HTTPException(
-                status_code=400,
-                detail="No markdown files found in data directory"
-            )
+            print("No documents found. Directory contents:")
+            for item in Path(ingester.data_dir).glob("*"):
+                print(f"- {item.name}")
 
         cleaned_documents = processor.clean_text(documents)
         documents_with_embeddings = embedder.generate_embeddings(cleaned_documents)
