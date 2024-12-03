@@ -2,6 +2,7 @@ import chromadb
 from chromadb.config import Settings
 from typing import List, Dict
 import numpy as np
+from datetime import datetime
 
 class VectorStore:
     def __init__(self, persist_directory: str = "chroma_db"):
@@ -43,6 +44,38 @@ class VectorStore:
                         metadata[key] = ""
                 metadatas.append(metadata)
 
+        self.collection.add(
+            ids=ids,
+            embeddings=embeddings,
+            documents=texts,
+            metadatas=metadatas
+        )
+
+    def store_report(self, reports: List[Dict]) -> None:
+        ids = []
+        embeddings = []
+        texts = []
+        metadatas = []
+    
+        for report in reports:
+            # create an id based on the timestamp
+            report_id = datetime.now().strftime('%Y%m%d%H%M%S%f')
+            ids.append(report_id)
+
+            # store section embedding
+            embeddings.append(report["embedding"].tolist())
+
+            # store report text
+            report_text = f"{report['type']}: {str(report['content'])}"
+            texts.append(report_text)
+
+            # create metadata
+            metadata = {
+                "source" : "received report",
+                "confidence" : "5/5"
+            }
+            metadatas.append(metadata)
+        
         self.collection.add(
             ids=ids,
             embeddings=embeddings,
