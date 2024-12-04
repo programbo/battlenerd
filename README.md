@@ -118,6 +118,27 @@ starting the server.
    python src/main.py --init
    ```
 
+### Offline Support
+
+The system includes offline capability using a local LLM:
+
+1. Download the model (4GB):
+
+   ```bash
+   python src/download_model.py
+   ```
+
+2. The system will automatically switch between:
+
+   - Online mode: Uses cloud LLM for best quality
+   - Offline mode: Uses local LLM for reliability
+
+3. Offline features:
+   - Vector search works without internet
+   - Local text generation available
+   - Automatic mode switching
+   - All data stored locally
+
 ## Development
 
 ### Setting Up

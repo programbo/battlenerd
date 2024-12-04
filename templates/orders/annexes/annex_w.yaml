@@ -1,0 +1,137 @@
+template: |
+  ANNEX W (AVIATION OPERATIONS) TO OPORD $operation_name
+  References: $references
+  Time Zone Used Throughout: $time_zone
+
+  1. SITUATION
+  ------------
+  a. Enemy Forces
+     (1) Air Capabilities
+         $enemy_air_capabilities
+     (2) Air Defense
+         $enemy_air_defense
+     (3) Most Likely COA
+         $enemy_air_likely_coa
+     (4) Most Dangerous COA
+         $enemy_air_dangerous_coa
+
+  b. Friendly Forces
+     (1) Higher Aviation Elements
+         $higher_aviation
+     (2) Adjacent Aviation Units
+         $adjacent_aviation
+     (3) Supporting Aviation
+         $supporting_aviation
+
+  2. MISSION
+  ----------
+  $aviation_mission
+
+  3. EXECUTION
+  -----------
+  a. Concept of Aviation Operations
+     (1) Overall Concept
+         $aviation_concept
+     (2) Scheme of Maneuver
+         $aviation_scheme
+     (3) Main Effort
+         $aviation_main_effort
+
+  b. Tasks to Aviation Units
+     (1) Attack Aviation
+         $attack_tasks
+     (2) Assault Aviation
+         $assault_tasks
+     (3) General Support Aviation
+         $gs_tasks
+     (4) Aviation Support
+         $aviation_support_tasks
+
+  c. Air Mission Tasks
+     (1) Close Combat Attack
+         $cca_tasks
+     (2) Air Assault
+         $air_assault_tasks
+     (3) Air Movement
+         $air_movement_tasks
+     (4) CASEVAC/MEDEVAC
+         $medical_tasks
+
+  d. Coordinating Instructions
+     (1) Air Control Points
+         $air_control_points
+     (2) Flight Routes
+         $flight_routes
+     (3) Battle Positions
+         $battle_positions
+     (4) FARP Operations
+         $farp_operations
+
+  4. SERVICE SUPPORT
+  -----------------
+  a. Aviation Maintenance
+     $aviation_maintenance
+
+  b. Aviation Logistics
+     (1) Class III/V
+         $aviation_supply
+     (2) FARP Support
+         $farp_support
+
+  5. COMMAND AND SIGNAL
+  --------------------
+  a. Command
+     (1) Aviation C2
+         $aviation_command
+     (2) Battle Rhythm
+         $battle_rhythm
+
+  b. Signal
+     (1) Air-Ground Communications
+         $air_ground_comms
+     (2) Aviation Networks
+         $aviation_networks
+
+  APPENDICES:
+  -----------
+  1. Air Routes Overlay
+  2. FARP Operations
+  3. Aviation A2C2
+  4. Aircraft Survivability
+  5. Aviation Support
+  6. UAS Operations
+
+variables:
+  - operation_name
+  - references
+  - time_zone
+  - enemy_air_capabilities
+  - enemy_air_defense
+  - enemy_air_likely_coa
+  - enemy_air_dangerous_coa
+  - higher_aviation
+  - adjacent_aviation
+  - supporting_aviation
+  - aviation_mission
+  - aviation_concept
+  - aviation_scheme
+  - aviation_main_effort
+  - attack_tasks
+  - assault_tasks
+  - gs_tasks
+  - aviation_support_tasks
+  - cca_tasks
+  - air_assault_tasks
+  - air_movement_tasks
+  - medical_tasks
+  - air_control_points
+  - flight_routes
+  - battle_positions
+  - farp_operations
+  - aviation_maintenance
+  - aviation_supply
+  - farp_support
+  - aviation_command
+  - battle_rhythm
+  - air_ground_comms
+  - aviation_networks

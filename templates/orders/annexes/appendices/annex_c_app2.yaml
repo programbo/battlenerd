@@ -1,0 +1,160 @@
+template: |
+  APPENDIX 2 (DECISION SUPPORT MATRIX) TO ANNEX C TO OPORD $operation_name
+  References: $references
+  Time Zone Used Throughout: $time_zone
+
+  1. PURPOSE
+  ----------
+  $purpose
+
+  2. DECISION POINTS
+  -----------------
+  a. Phase 1 (Shaping)
+     (1) DP 1.1: Initiate Maritime Interdiction
+         - Event: $dp_1_1_event
+         - Criteria: $dp_1_1_criteria
+         - Decision: $dp_1_1_decision
+         - Lead Time: $dp_1_1_lead_time
+         - Options: $dp_1_1_options
+
+     (2) DP 1.2: Air Superiority Achievement
+         - Event: $dp_1_2_event
+         - Criteria: $dp_1_2_criteria
+         - Decision: $dp_1_2_decision
+         - Lead Time: $dp_1_2_lead_time
+         - Options: $dp_1_2_options
+
+  b. Phase 2 (Decisive)
+     (1) DP 2.1: Initiate Amphibious Operations
+         - Event: $dp_2_1_event
+         - Criteria: $dp_2_1_criteria
+         - Decision: $dp_2_1_decision
+         - Lead Time: $dp_2_1_lead_time
+         - Options: $dp_2_1_options
+
+     (2) DP 2.2: Secure Beachhead
+         - Event: $dp_2_2_event
+         - Criteria: $dp_2_2_criteria
+         - Decision: $dp_2_2_decision
+         - Lead Time: $dp_2_2_lead_time
+         - Options: $dp_2_2_options
+
+  c. Phase 3 (Exploitation)
+     (1) DP 3.1: Advance to Roxas City
+         - Event: $dp_3_1_event
+         - Criteria: $dp_3_1_criteria
+         - Decision: $dp_3_1_decision
+         - Lead Time: $dp_3_1_lead_time
+         - Options: $dp_3_1_options
+
+     (2) DP 3.2: Secure San Rafael Mine
+         - Event: $dp_3_2_event
+         - Criteria: $dp_3_2_criteria
+         - Decision: $dp_3_2_decision
+         - Lead Time: $dp_3_2_lead_time
+         - Options: $dp_3_2_options
+
+  d. Phase 4 (Transition)
+     (1) DP 4.1: Transition to UN Forces
+         - Event: $dp_4_1_event
+         - Criteria: $dp_4_1_criteria
+         - Decision: $dp_4_1_decision
+         - Lead Time: $dp_4_1_lead_time
+         - Options: $dp_4_1_options
+
+  3. DECISION SUPPORT REQUIREMENTS
+  ------------------------------
+  a. Intelligence Requirements
+     (1) Phase 1: $phase_1_intel_req
+     (2) Phase 2: $phase_2_intel_req
+     (3) Phase 3: $phase_3_intel_req
+     (4) Phase 4: $phase_4_intel_req
+
+  b. Operations Requirements
+     (1) Phase 1: $phase_1_ops_req
+     (2) Phase 2: $phase_2_ops_req
+     (3) Phase 3: $phase_3_ops_req
+     (4) Phase 4: $phase_4_ops_req
+
+  c. Support Requirements
+     (1) Phase 1: $phase_1_support_req
+     (2) Phase 2: $phase_2_support_req
+     (3) Phase 3: $phase_3_support_req
+     (4) Phase 4: $phase_4_support_req
+
+  4. BRANCH PLANS
+  --------------
+  a. Branch Plan ALPHA: Enemy Naval Counterattack
+     $branch_plan_alpha
+
+  b. Branch Plan BRAVO: Enemy Air Counterattack
+     $branch_plan_bravo
+
+  c. Branch Plan CHARLIE: Enemy Ground Counterattack
+     $branch_plan_charlie
+
+  5. SEQUEL PLANS
+  --------------
+  a. Sequel Plan ONE: Extended Operations
+     $sequel_plan_one
+
+  b. Sequel Plan TWO: Rapid Withdrawal
+     $sequel_plan_two
+
+variables:
+  - operation_name
+  - references
+  - time_zone
+  - purpose
+  - dp_1_1_event
+  - dp_1_1_criteria
+  - dp_1_1_decision
+  - dp_1_1_lead_time
+  - dp_1_1_options
+  - dp_1_2_event
+  - dp_1_2_criteria
+  - dp_1_2_decision
+  - dp_1_2_lead_time
+  - dp_1_2_options
+  - dp_2_1_event
+  - dp_2_1_criteria
+  - dp_2_1_decision
+  - dp_2_1_lead_time
+  - dp_2_1_options
+  - dp_2_2_event
+  - dp_2_2_criteria
+  - dp_2_2_decision
+  - dp_2_2_lead_time
+  - dp_2_2_options
+  - dp_3_1_event
+  - dp_3_1_criteria
+  - dp_3_1_decision
+  - dp_3_1_lead_time
+  - dp_3_1_options
+  - dp_3_2_event
+  - dp_3_2_criteria
+  - dp_3_2_decision
+  - dp_3_2_lead_time
+  - dp_3_2_options
+  - dp_4_1_event
+  - dp_4_1_criteria
+  - dp_4_1_decision
+  - dp_4_1_lead_time
+  - dp_4_1_options
+  - phase_1_intel_req
+  - phase_2_intel_req
+  - phase_3_intel_req
+  - phase_4_intel_req
+  - phase_1_ops_req
+  - phase_2_ops_req
+  - phase_3_ops_req
+  - phase_4_ops_req
+  - phase_1_support_req
+  - phase_2_support_req
+  - phase_3_support_req
+  - phase_4_support_req
+  - branch_plan_alpha
+  - branch_plan_bravo
+  - branch_plan_charlie
+  - sequel_plan_one
+  - sequel_plan_two

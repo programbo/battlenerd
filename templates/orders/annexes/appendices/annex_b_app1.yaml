@@ -1,0 +1,145 @@
+template: |
+  APPENDIX 1 (INTELLIGENCE ESTIMATE) TO ANNEX B TO OPORD $operation_name
+  References: $references
+  Time Zone Used Throughout: $time_zone
+
+  1. MISSION
+  ----------
+  $mission
+
+  2. AREA OF OPERATIONS
+  --------------------
+  a. Physical Environment
+     (1) Geography
+         (a) Terrain
+             $terrain_description
+         (b) Hydrography
+             $hydrography
+         (c) Climate and Weather
+             $climate_weather
+
+     (2) Military Aspects of Terrain (OCOKA)
+         (a) Observation and Fields of Fire
+             $observation_fields_fire
+         (b) Cover and Concealment
+             $cover_concealment
+         (c) Obstacles
+             $obstacles
+         (d) Key Terrain
+             $key_terrain
+         (e) Avenues of Approach
+             $avenues_approach
+
+  3. ENEMY SITUATION
+  -----------------
+  a. Composition
+     (1) Ground Forces
+         $enemy_ground_forces
+     (2) Naval Forces
+         $enemy_naval_forces
+     (3) Air Forces
+         $enemy_air_forces
+     (4) Air Defense
+         $enemy_air_defense
+     (5) Special Operations Forces
+         $enemy_sof
+
+  b. Disposition
+     (1) Current Locations
+         $enemy_locations
+     (2) Recent Activities
+         $enemy_activities
+     (3) Defensive Works
+         $enemy_defenses
+
+  c. Strength
+     (1) Committed Forces
+         $committed_forces
+     (2) Reinforcement Capabilities
+         $reinforcement_capability
+     (3) Combat Effectiveness
+         $combat_effectiveness
+
+  d. Capabilities
+     (1) Conventional Operations
+         $conventional_capabilities
+     (2) Unconventional Operations
+         $unconventional_capabilities
+     (3) Support Capabilities
+         $support_capabilities
+
+  4. ENEMY COURSES OF ACTION
+  -------------------------
+  a. Most Likely COA
+     (1) Ground Operations
+         $likely_ground_ops
+     (2) Naval Operations
+         $likely_naval_ops
+     (3) Air Operations
+         $likely_air_ops
+     (4) Supporting Operations
+         $likely_support_ops
+
+  b. Most Dangerous COA
+     (1) Ground Operations
+         $dangerous_ground_ops
+     (2) Naval Operations
+         $dangerous_naval_ops
+     (3) Air Operations
+         $dangerous_air_ops
+     (4) Supporting Operations
+         $dangerous_support_ops
+
+  5. CONCLUSIONS
+  -------------
+  a. Effects on Enemy COAs
+     $effects_on_enemy
+
+  b. Effects on Own COAs
+     $effects_on_friendly
+
+  c. Intelligence Requirements
+     (1) PIRs
+         $pirs
+     (2) Intelligence Gaps
+         $intel_gaps
+
+variables:
+  - operation_name
+  - references
+  - time_zone
+  - mission
+  - terrain_description
+  - hydrography
+  - climate_weather
+  - observation_fields_fire
+  - cover_concealment
+  - obstacles
+  - key_terrain
+  - avenues_approach
+  - enemy_ground_forces
+  - enemy_naval_forces
+  - enemy_air_forces
+  - enemy_air_defense
+  - enemy_sof
+  - enemy_locations
+  - enemy_activities
+  - enemy_defenses
+  - committed_forces
+  - reinforcement_capability
+  - combat_effectiveness
+  - conventional_capabilities
+  - unconventional_capabilities
+  - support_capabilities
+  - likely_ground_ops
+  - likely_naval_ops
+  - likely_air_ops
+  - likely_support_ops
+  - dangerous_ground_ops
+  - dangerous_naval_ops
+  - dangerous_air_ops
+  - dangerous_support_ops
+  - effects_on_enemy
+  - effects_on_friendly
+  - pirs
+  - intel_gaps

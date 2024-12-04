@@ -1,0 +1,140 @@
+template: |
+  APPENDIX 3 (BEACH STUDIES) TO ANNEX G TO OPORD $operation_name
+  References: $references
+  Time Zone Used Throughout: $time_zone
+
+  1. PURPOSE
+  ----------
+  $purpose
+
+  2. BEACH CHARACTERISTICS
+  -----------------------
+  a. Physical Characteristics
+     (1) Beach Gradient
+         $beach_gradient
+     (2) Beach Composition
+         $beach_composition
+     (3) Beach Length and Width
+         $beach_dimensions
+     (4) Surf Zone
+         $surf_zone
+
+  b. Hydrographic Data
+     (1) Tides
+         $tidal_data
+     (2) Currents
+         $currents
+     (3) Sea State
+         $sea_state
+     (4) Water Depth
+         $water_depth
+
+  3. LANDING ZONES
+  ---------------
+  a. Primary Landing Zones
+     (1) Location
+         $primary_location
+     (2) Capacity
+         $primary_capacity
+     (3) Approaches
+         $primary_approaches
+     (4) Limitations
+         $primary_limitations
+
+  b. Alternate Landing Zones
+     (1) Location
+         $alternate_location
+     (2) Capacity
+         $alternate_capacity
+     (3) Approaches
+         $alternate_approaches
+     (4) Limitations
+         $alternate_limitations
+
+  4. BEACH SUPPORT AREAS
+  ---------------------
+  a. Primary BSA
+     (1) Location
+         $primary_bsa_location
+     (2) Capacity
+         $primary_bsa_capacity
+     (3) Development Requirements
+         $primary_bsa_development
+
+  b. Alternate BSA
+     (1) Location
+         $alternate_bsa_location
+     (2) Capacity
+         $alternate_bsa_capacity
+     (3) Development Requirements
+         $alternate_bsa_development
+
+  5. OBSTACLES AND MINES
+  ---------------------
+  a. Natural Obstacles
+     $natural_obstacles
+
+  b. Man-made Obstacles
+     $manmade_obstacles
+
+  c. Suspected Mines
+     $suspected_mines
+
+  6. ENGINEER REQUIREMENTS
+  -----------------------
+  a. Beach Preparation
+     $beach_preparation
+
+  b. Obstacle Reduction
+     $obstacle_reduction
+
+  c. Route Development
+     $route_development
+
+  7. SUPPORTING INFORMATION
+  ------------------------
+  a. Beach Capacity Calculations
+     $beach_calculations
+
+  b. Tide Tables
+     $tide_tables
+
+  c. Weather Data
+     $weather_data
+
+variables:
+  - operation_name
+  - references
+  - time_zone
+  - purpose
+  - beach_gradient
+  - beach_composition
+  - beach_dimensions
+  - surf_zone
+  - tidal_data
+  - currents
+  - sea_state
+  - water_depth
+  - primary_location
+  - primary_capacity
+  - primary_approaches
+  - primary_limitations
+  - alternate_location
+  - alternate_capacity
+  - alternate_approaches
+  - alternate_limitations
+  - primary_bsa_location
+  - primary_bsa_capacity
+  - primary_bsa_development
+  - alternate_bsa_location
+  - alternate_bsa_capacity
+  - alternate_bsa_development
+  - natural_obstacles
+  - manmade_obstacles
+  - suspected_mines
+  - beach_preparation
+  - obstacle_reduction
+  - route_development
+  - beach_calculations
+  - tide_tables
+  - weather_data

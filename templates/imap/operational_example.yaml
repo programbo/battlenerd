@@ -1,0 +1,95 @@
+template: |
+  OPERATIONAL IMAP ANALYSIS: OPERATION STEEL SENTINEL
+  =================================================
+
+  1. INFORMATION
+  -------------
+  a. Sources:
+  - UN Security Council Resolution 8873
+  - Coalition force laydowns
+  - Satellite imagery of AO
+  - SIGINT reports
+  - HUMINT from Roxas City
+
+  b. Raw Intelligence:
+  $raw_intelligence
+
+  2. MEANING
+  ----------
+  a. Operational Environment:
+  - Physical Domain: $physical_domain
+  - Information Domain: $info_domain
+  - Human Domain: $human_domain
+
+  b. Known Facts:
+  $known_facts
+  Confidence: $facts_confidence
+
+  c. Assumptions:
+  $assumptions
+  Confidence: $assumptions_confidence
+
+  d. Intelligence Gaps:
+  $gaps
+  Priority: $gaps_priority
+
+  3. ACTION
+  ---------
+  a. Immediate Requirements:
+  $immediate_actions
+
+  b. Force Elements Required:
+  $force_elements
+
+  c. Support Requirements:
+  $support_requirements
+
+  4. PREDICTION
+  ------------
+  a. Most Likely Enemy COA:
+  $likely_coa
+  Indicators:
+  $likely_indicators
+
+  b. Most Dangerous Enemy COA:
+  $dangerous_coa
+  Indicators:
+  $dangerous_indicators
+
+  c. Branch Plans Required:
+  $branch_plans
+
+  CONFIDENCE ASSESSMENT
+  --------------------
+  Overall Assessment Confidence: $overall_confidence
+  Information Reliability Matrix:
+  - Source Reliability: $source_reliability
+  - Information Credibility: $info_credibility
+
+  RECOMMENDATIONS
+  --------------
+  $recommendations
+
+variables:
+  - raw_intelligence
+  - physical_domain
+  - info_domain
+  - human_domain
+  - known_facts
+  - facts_confidence
+  - assumptions
+  - assumptions_confidence
+  - gaps
+  - gaps_priority
+  - immediate_actions
+  - force_elements
+  - support_requirements
+  - likely_coa
+  - likely_indicators
+  - dangerous_coa
+  - dangerous_indicators
+  - branch_plans
+  - overall_confidence
+  - source_reliability
+  - info_credibility
+  - recommendations

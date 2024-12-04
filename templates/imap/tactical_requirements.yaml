@@ -1,0 +1,68 @@
+information_summary:
+  critical: true
+  reason: "Core IMAP component - tactical situation understanding"
+  priority: 1
+  required_context:
+    - immediate_situation
+    - local_terrain
+    - weather_conditions
+    - friendly_forces
+    - enemy_forces
+  validation_rules:
+    - min_length: 100
+    - must_include: ["who", "what", "where", "when"]
+    - must_include_tactical_details: true
+
+known_facts:
+  critical: true
+  reason: "Required for tactical analysis"
+  priority: 1
+  required_context:
+    - confirmed_intelligence
+    - direct_observation
+    - sensor_data
+    - patrol_reports
+  validation_rules:
+    - min_items: 3
+    - must_be_verifiable: true
+    - must_include_time_stamps: true
+
+assumptions:
+  critical: false
+  reason: "Needed for tactical planning"
+  priority: 2
+  required_context:
+    - intelligence_gaps
+    - enemy_patterns
+    - local_factors
+  validation_rules:
+    - must_be_labeled_assumption: true
+    - must_include_confidence_level: true
+
+terrain_analysis:
+  critical: true
+  reason: "Essential for tactical operations"
+  priority: 1
+  required_context:
+    - observation_fields_of_fire
+    - cover_concealment
+    - obstacles
+    - key_terrain
+    - avenues_approach
+  validation_rules:
+    - must_include_all_ocoka_factors: true
+    - must_be_current: true
+
+enemy_assessment:
+  critical: true
+  reason: "Critical for tactical planning"
+  priority: 1
+  required_context:
+    - enemy_composition
+    - enemy_disposition
+    - enemy_strength
+    - enemy_capabilities
+    - enemy_likely_actions
+  validation_rules:
+    - must_include_combat_power: true
+    - must_address_immediate_threats: true

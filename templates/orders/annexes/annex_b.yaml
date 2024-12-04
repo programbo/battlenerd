@@ -1,0 +1,131 @@
+template: |
+  ANNEX B (INTELLIGENCE) TO OPORD $operation_name
+  References: $references
+  Time Zone Used Throughout: $time_zone
+
+  1. SITUATION
+  ------------
+  a. Area of Interest
+     (1) Area of Operations
+         $area_of_operations
+     (2) Area of Interest
+         $area_of_interest
+     (3) Area of Influence
+         $area_of_influence
+
+  b. Enemy Forces
+     (1) Composition
+         $enemy_composition
+     (2) Disposition
+         $enemy_disposition
+     (3) Strength
+         $enemy_strength
+     (4) Recent Activities
+         $enemy_activities
+     (5) Peculiarities and Weaknesses
+         $enemy_weaknesses
+
+  c. Enemy Capabilities
+     (1) Conventional Forces
+         $conventional_capabilities
+     (2) Irregular Forces
+         $irregular_capabilities
+     (3) Information Operations
+         $info_ops_capabilities
+
+  2. MISSION
+  ----------
+  $intel_mission
+
+  3. EXECUTION
+  -----------
+  a. Concept of Intelligence Operations
+     (1) Priority Intelligence Requirements (PIR)
+         $pir
+     (2) Intelligence Tasks
+         $intel_tasks
+     (3) Intelligence Support to Targeting
+         $targeting_support
+
+  b. Tasks to Subordinate Units
+     $subordinate_tasks
+
+  c. Collection Plan
+     (1) Priority of Collection
+         $collection_priority
+     (2) Collection Assets
+         $collection_assets
+     (3) Named Areas of Interest
+         $nai_list
+
+  d. Processing and Exploitation
+     $processing_plan
+
+  4. SERVICE SUPPORT
+  -----------------
+  a. Intelligence Personnel
+     $intel_personnel
+
+  b. Intelligence Equipment
+     $intel_equipment
+
+  c. Collection Asset Support
+     $asset_support
+
+  5. COMMAND AND SIGNAL
+  --------------------
+  a. Command
+     (1) Intelligence Chain of Command
+         $intel_command
+     (2) Succession of Command
+         $intel_succession
+
+  b. Signal
+     (1) Intelligence Networks
+         $intel_networks
+     (2) Intelligence Systems
+         $intel_systems
+
+  APPENDICES:
+  -----------
+  1. Intelligence Estimate
+  2. Counterintelligence
+  3. Signals Intelligence
+  4. Human Intelligence
+  5. Imagery Intelligence
+  6. Measurement and Signature Intelligence
+  7. Intelligence Support to Targeting
+  8. Intelligence Support to Information Operations
+  9. Intelligence Support to Protection
+
+variables:
+  - operation_name
+  - references
+  - time_zone
+  - area_of_operations
+  - area_of_interest
+  - area_of_influence
+  - enemy_composition
+  - enemy_disposition
+  - enemy_strength
+  - enemy_activities
+  - enemy_weaknesses
+  - conventional_capabilities
+  - irregular_capabilities
+  - info_ops_capabilities
+  - intel_mission
+  - pir
+  - intel_tasks
+  - targeting_support
+  - subordinate_tasks
+  - collection_priority
+  - collection_assets
+  - nai_list
+  - processing_plan
+  - intel_personnel
+  - intel_equipment
+  - asset_support
+  - intel_command
+  - intel_succession
+  - intel_networks
+  - intel_systems

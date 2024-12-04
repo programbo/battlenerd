@@ -1,0 +1,11 @@
+intelligence_summary:
+  critical: true
+  reason: "Core intelligence component"
+  priority: 1
+  required_context:
+    - enemy_situation
+    - enemy_capabilities
+    - enemy_likely_coa
+  validation_rules:
+    - must_include_all_intel_disciplines: true
+# ... rest of Annex B requirements

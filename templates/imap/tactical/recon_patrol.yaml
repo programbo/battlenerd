@@ -1,0 +1,221 @@
+template: |
+  TACTICAL IMAP: SQUAD RECONNAISSANCE PATROL
+  ========================================
+
+  1. INFORMATION
+  -------------
+  a. Area of Operations:
+  - Terrain Features: $terrain_features
+  - Vegetation: $vegetation
+  - Weather Effects: $weather_effects
+  - Light Conditions: $light_conditions
+
+  b. Enemy Assessment:
+  - Known Positions: $known_positions
+  - Likely Locations: $likely_locations
+  - Pattern of Life: $pattern_of_life
+  - Recent Activity: $recent_activity
+
+  c. Patrol Resources:
+  - Patrol Composition: $patrol_composition
+  - Equipment State: $equipment_state
+  - Special Equipment: $special_equipment
+  - Support Assets: $support_assets
+
+  2. MEANING
+  ----------
+  a. Route Analysis:
+  - Primary Route: $primary_route
+  - Alternate Routes: $alternate_routes
+  - RV Points: $rv_points
+  - Emergency RV: $emergency_rv
+
+  b. Tactical Considerations:
+  - Observation Points: $observation_points
+  - Hide Locations: $hide_locations
+  - Danger Areas: $danger_areas
+  - Safe Areas: $safe_areas
+
+  c. Mission Constraints:
+  - Time Restrictions: $time_restrictions
+  - ROE: $rules_of_engagement
+  - Comms Windows: $comms_windows
+  - Boundaries: $boundaries
+
+  3. ACTION
+  ---------
+  a. Movement Plan:
+  - Formation Selection: $formations
+  - Navigation Method: $navigation_method
+  - Stealth Requirements: $stealth_requirements
+  - Speed Control: $speed_control
+
+  b. Observation Plan:
+  - OP Locations: $op_locations
+  - Observation Tasks: $observation_tasks
+  - Recording Method: $recording_method
+  - Reporting Schedule: $reporting_schedule
+
+  c. Contact Drills:
+  - Near Ambush: $near_ambush
+  - Far Ambush: $far_ambush
+  - Enemy Sighting: $enemy_sighting
+  - Compromise Plan: $compromise_plan
+
+  4. PREDICTION
+  ------------
+  a. Most Likely Enemy Contact:
+  - Location: $likely_contact_location
+  - Enemy Strength: $likely_enemy_strength
+  - Enemy Action: $likely_enemy_action
+  - Time Period: $likely_contact_time
+
+  b. Most Dangerous Situation:
+  - Enemy Forces: $dangerous_enemy_force
+  - Location: $dangerous_location
+  - Circumstances: $dangerous_circumstances
+  - Impact: $dangerous_impact
+
+  c. Decision Points:
+  - Abort Criteria: $abort_criteria
+  - Extraction Criteria: $extraction_criteria
+  - Contact Criteria: $contact_criteria
+  - Compromise Actions: $compromise_actions
+
+  IMMEDIATE ACTION DRILLS
+  ----------------------
+  1. Contact Drills:
+  - Break Contact Front: $break_contact_front
+  - Break Contact Rear: $break_contact_rear
+  - Break Contact Flank: $break_contact_flank
+  - Counter Ambush: $counter_ambush_drill
+
+  2. Emergency Procedures:
+  - Casualty Evacuation: $casevac_drill
+  - Lost Communications: $lost_comms_drill
+  - Lost Member: $lost_member_drill
+  - Compromise: $compromise_drill
+
+  3. Special Situations:
+  - Aircraft Contact: $aircraft_drill
+  - Vehicle Contact: $vehicle_drill
+  - Civilians: $civilian_contact_drill
+  - Dogs: $dog_contact_drill
+
+  BATTLE PROCEDURE
+  ---------------
+  1. Preparation:
+  - Orders Process: $orders_process
+  - Equipment Checks: $equipment_checks
+  - Rehearsals: $rehearsals
+  - Special Instructions: $special_instructions
+
+  2. Movement Phase:
+  - Formation Changes: $formation_changes
+  - Hand Signals: $hand_signals
+  - Navigation Checks: $navigation_checks
+  - Security Halts: $security_halts
+
+  3. Observation Phase:
+  - OP Construction: $op_construction
+  - Observation Roster: $observation_roster
+  - Information Collection: $info_collection
+  - Reporting Process: $reporting_process
+
+  4. Extraction Phase:
+  - Extraction Method: $extraction_method
+  - Route Selection: $extraction_route
+  - Actions at ERV: $erv_actions
+  - Debrief Process: $debrief_process
+
+  CONFIDENCE ASSESSMENT
+  --------------------
+  Intelligence Reliability: $intel_reliability
+  Patrol Capability: $patrol_capability
+  Overall Assessment: $overall_confidence
+
+  RECOMMENDATIONS
+  --------------
+  $recommendations
+
+variables:
+  - terrain_features
+  - vegetation
+  - weather_effects
+  - light_conditions
+  - known_positions
+  - likely_locations
+  - pattern_of_life
+  - recent_activity
+  - patrol_composition
+  - equipment_state
+  - special_equipment
+  - support_assets
+  - primary_route
+  - alternate_routes
+  - rv_points
+  - emergency_rv
+  - observation_points
+  - hide_locations
+  - danger_areas
+  - safe_areas
+  - time_restrictions
+  - rules_of_engagement
+  - comms_windows
+  - boundaries
+  - formations
+  - navigation_method
+  - stealth_requirements
+  - speed_control
+  - op_locations
+  - observation_tasks
+  - recording_method
+  - reporting_schedule
+  - near_ambush
+  - far_ambush
+  - enemy_sighting
+  - compromise_plan
+  - likely_contact_location
+  - likely_enemy_strength
+  - likely_enemy_action
+  - likely_contact_time
+  - dangerous_enemy_force
+  - dangerous_location
+  - dangerous_circumstances
+  - dangerous_impact
+  - abort_criteria
+  - extraction_criteria
+  - contact_criteria
+  - compromise_actions
+  - break_contact_front
+  - break_contact_rear
+  - break_contact_flank
+  - counter_ambush_drill
+  - casevac_drill
+  - lost_comms_drill
+  - lost_member_drill
+  - compromise_drill
+  - aircraft_drill
+  - vehicle_drill
+  - civilian_contact_drill
+  - dog_contact_drill
+  - orders_process
+  - equipment_checks
+  - rehearsals
+  - special_instructions
+  - formation_changes
+  - hand_signals
+  - navigation_checks
+  - security_halts
+  - op_construction
+  - observation_roster
+  - info_collection
+  - reporting_process
+  - extraction_method
+  - extraction_route
+  - erv_actions
+  - debrief_process
+  - intel_reliability
+  - patrol_capability
+  - overall_confidence
+  - recommendations

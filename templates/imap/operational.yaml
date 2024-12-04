@@ -1,0 +1,68 @@
+template: |
+  OPERATIONAL IMAP ANALYSIS
+  ========================
+
+  1. INFORMATION
+  -------------
+  $information_summary
+
+  2. MEANING
+  ----------
+  a. Operational Environment:
+  $operational_context
+
+  b. Known Operational Factors:
+  $known_facts
+
+  c. Operational Assumptions:
+  $assumptions
+
+  d. Operational Intelligence Gaps:
+  $gaps
+
+  3. ACTION
+  ---------
+  a. Operational Actions Required:
+  $required_actions
+
+  b. Operational Priority:
+  $priority
+
+  c. Force Elements Required:
+  $force_elements
+
+  4. PREDICTION
+  ------------
+  a. Expected Operational Outcomes:
+  $likely_outcome
+
+  b. Alternative Operational Scenarios:
+  $other_possibilities
+
+  c. Operational Warning Indicators:
+  $warning_signs
+
+  CONFIDENCE ASSESSMENT
+  --------------------
+  Information Reliability: $info_reliability
+  Operational Analysis Confidence: $analytical_confidence
+
+  OPERATIONAL RECOMMENDATIONS
+  --------------------------
+  $recommendations
+
+variables:
+  - information_summary
+  - operational_context
+  - known_facts
+  - assumptions
+  - gaps
+  - required_actions
+  - priority
+  - force_elements
+  - likely_outcome
+  - other_possibilities
+  - warning_signs
+  - info_reliability
+  - analytical_confidence
+  - recommendations

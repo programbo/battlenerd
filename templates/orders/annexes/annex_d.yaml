@@ -1,0 +1,144 @@
+template: |
+  ANNEX D (FIRES) TO OPORD $operation_name
+  References: $references
+  Time Zone Used Throughout: $time_zone
+
+  1. SITUATION
+  ------------
+  a. Enemy Forces
+     (1) Artillery and Air Defense
+         $enemy_artillery
+     (2) Target Acquisition Capabilities
+         $enemy_acquisition
+     (3) Electronic Warfare Capabilities
+         $enemy_ew
+
+  b. Friendly Forces
+     (1) Higher HQ Fire Support
+         $higher_fires
+     (2) Adjacent Unit Fires
+         $adjacent_fires
+     (3) Supporting Fires
+         $supporting_fires
+
+  2. MISSION
+  ----------
+  $fires_mission
+
+  3. EXECUTION
+  -----------
+  a. Concept of Fires
+     (1) Purpose
+         $fires_purpose
+     (2) Priority of Fires
+         $fires_priority
+     (3) Allocation of Fires
+         $fires_allocation
+
+  b. Tasks to Subordinate Units
+     (1) Artillery Units
+         $artillery_tasks
+     (2) Mortar Units
+         $mortar_tasks
+     (3) Naval Gunfire
+         $ngfs_tasks
+     (4) Close Air Support
+         $cas_tasks
+
+  c. Target Acquisition
+     (1) Priority Intelligence Requirements
+         $targeting_pir
+     (2) Named Areas of Interest
+         $targeting_nai
+     (3) Target Areas of Interest
+         $targeting_tai
+
+  d. Targeting
+     (1) High-Payoff Target List
+         $hptl
+     (2) Attack Guidance Matrix
+         $agm
+     (3) Target Selection Standards
+         $tss
+
+  e. Fire Support Coordination
+     (1) Fire Support Coordination Measures
+         $fscm
+     (2) Airspace Coordination Areas
+         $aca
+     (3) Restricted Fire Areas
+         $rfa
+
+  4. SERVICE SUPPORT
+  -----------------
+  a. Ammunition
+     (1) Required Supply Rate
+         $rsr
+     (2) Controlled Supply Rate
+         $csr
+     (3) Special Ammunition
+         $special_ammo
+
+  b. Transportation
+     $ammo_transport
+
+  5. COMMAND AND SIGNAL
+  --------------------
+  a. Command
+     (1) Fire Support Chain of Command
+         $fires_command
+     (2) Fire Support Coordination Centers
+         $fscc
+
+  b. Signal
+     (1) Communications Networks
+         $fires_networks
+     (2) Digital Systems
+         $digital_systems
+
+  APPENDICES:
+  -----------
+  1. Fire Support Overlay
+  2. Fire Support Execution Matrix
+  3. Target List Worksheet
+  4. Survey Plan
+  5. Naval Gunfire Support Plan
+  6. Air Support Plan
+  7. Fire Support Assessment Plan
+  8. Electronic Warfare Plan
+
+variables:
+  - operation_name
+  - references
+  - time_zone
+  - enemy_artillery
+  - enemy_acquisition
+  - enemy_ew
+  - higher_fires
+  - adjacent_fires
+  - supporting_fires
+  - fires_mission
+  - fires_purpose
+  - fires_priority
+  - fires_allocation
+  - artillery_tasks
+  - mortar_tasks
+  - ngfs_tasks
+  - cas_tasks
+  - targeting_pir
+  - targeting_nai
+  - targeting_tai
+  - hptl
+  - agm
+  - tss
+  - fscm
+  - aca
+  - rfa
+  - rsr
+  - csr
+  - special_ammo
+  - ammo_transport
+  - fires_command
+  - fscc
+  - fires_networks
+  - digital_systems

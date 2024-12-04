@@ -1,0 +1,17 @@
+template: |
+  Tactical Analysis:
+
+  Procedure: $name
+  Key Steps:
+  $steps
+
+  Important Considerations:
+  $considerations
+
+  Source: $source
+
+variables:
+  - name
+  - steps
+  - considerations
+  - source

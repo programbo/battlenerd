@@ -1,0 +1,41 @@
+template: |
+  Risk Assessment for Op Steel Sentinel
+
+  Risk Categories:
+  {% for risk in risks %}
+  {{risk.category}}:
+  - Score: {{risk.score}}
+  - Rationale: {{risk.rationale}}
+
+  {% endfor %}
+
+  Overall Summary:
+  {{summary}}
+
+variables:
+  - risks:
+      type: array
+      items:
+        type: object
+        properties:
+          category:
+            type: string
+            enum:
+              - Mission Success
+              - Operational Readiness
+              - Cyber Security
+              - Supply Chain
+              - Intelligence
+              - Personnel
+              - Environmental
+              - Political
+              - Financial
+              - Time
+          score:
+            type: number
+            minimum: 0
+            maximum: 1
+          rationale:
+            type: string
+  - summary:
+      type: string

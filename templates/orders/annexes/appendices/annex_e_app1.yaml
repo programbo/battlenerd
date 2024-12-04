@@ -1,0 +1,216 @@
+template: |
+  APPENDIX 1 (AIR DEFENSE PLAN) TO ANNEX E TO OPORD $operation_name
+  References: $references
+  Time Zone Used Throughout: $time_zone
+
+  1. SITUATION
+  ------------
+  a. Enemy Air Forces
+     (1) Fixed Wing Assets
+         (a) Fighter Aircraft
+             $enemy_fighters
+         (b) Attack Aircraft
+             $enemy_attack
+         (c) Support Aircraft
+             $enemy_support_air
+
+     (2) Rotary Wing Assets
+         (a) Attack Helicopters
+             $enemy_attack_helo
+         (b) Transport Helicopters
+             $enemy_transport_helo
+
+     (3) Unmanned Systems
+         (a) Armed UAVs
+             $enemy_armed_uav
+         (b) Reconnaissance UAVs
+             $enemy_recon_uav
+
+  b. Enemy Air Defense
+     (1) Long Range Systems
+         $enemy_long_range_ad
+     (2) Medium Range Systems
+         $enemy_medium_range_ad
+     (3) Short Range Systems
+         $enemy_short_range_ad
+     (4) MANPADS
+         $enemy_manpads
+
+  2. MISSION
+  ----------
+  $air_defense_mission
+
+  3. EXECUTION
+  -----------
+  a. Concept of Operations
+     (1) General Concept
+         $ad_concept
+     (2) Priority of Protection
+         $protection_priority
+     (3) Weapons Control Status
+         $weapons_control
+
+  b. Tasks by Phase
+     (1) Phase 1 (Shaping)
+         (a) Early Warning
+             $phase_1_early_warning
+         (b) Active Defense
+             $phase_1_active_defense
+         (c) Passive Defense
+             $phase_1_passive_defense
+
+     (2) Phase 2 (Decisive)
+         (a) Early Warning
+             $phase_2_early_warning
+         (b) Active Defense
+             $phase_2_active_defense
+         (c) Passive Defense
+             $phase_2_passive_defense
+
+     (3) Phase 3 (Exploitation)
+         (a) Early Warning
+             $phase_3_early_warning
+         (b) Active Defense
+             $phase_3_active_defense
+         (c) Passive Defense
+             $phase_3_passive_defense
+
+  c. Coordinating Instructions
+     (1) Air Defense Warning Conditions
+         $ad_warning
+     (2) Weapons Control Status
+         $weapons_status
+     (3) Rules of Engagement
+         $ad_roe
+     (4) IFF Procedures
+         $iff_procedures
+
+  4. AIR DEFENSE SYSTEMS
+  --------------------
+  a. Long Range Systems
+     (1) Location and Coverage
+         $long_range_coverage
+     (2) Engagement Criteria
+         $long_range_engagement
+     (3) Control Measures
+         $long_range_control
+
+  b. Medium Range Systems
+     (1) Location and Coverage
+         $medium_range_coverage
+     (2) Engagement Criteria
+         $medium_range_engagement
+     (3) Control Measures
+         $medium_range_control
+
+  c. Short Range Systems
+     (1) Location and Coverage
+         $short_range_coverage
+     (2) Engagement Criteria
+         $short_range_engagement
+     (3) Control Measures
+         $short_range_control
+
+  5. EARLY WARNING
+  --------------
+  a. Radar Coverage
+     (1) Ground-Based Radar
+         $ground_radar
+     (2) Airborne Early Warning
+         $airborne_warning
+     (3) Naval Radar Systems
+         $naval_radar
+
+  b. Air Picture
+     (1) Recognized Air Picture
+         $recognized_air
+     (2) Data Links
+         $data_links
+     (3) Information Flow
+         $info_flow
+
+  6. PASSIVE AIR DEFENSE
+  --------------------
+  a. Camouflage and Concealment
+     $camouflage_plan
+
+  b. Dispersion
+     $dispersion_plan
+
+  c. Hardening
+     $hardening_plan
+
+  7. COMMAND AND CONTROL
+  --------------------
+  a. Command Posts
+     (1) ADOC Location
+         $adoc_location
+     (2) Alternate ADOC
+         $alt_adoc
+     (3) Sector Operations Centers
+         $soc_locations
+
+  b. Communications
+     (1) Primary Nets
+         $primary_nets
+     (2) Alternate Nets
+         $alternate_nets
+     (3) Emergency Procedures
+         $emergency_comms
+
+variables:
+  - operation_name
+  - references
+  - time_zone
+  - enemy_fighters
+  - enemy_attack
+  - enemy_support_air
+  - enemy_attack_helo
+  - enemy_transport_helo
+  - enemy_armed_uav
+  - enemy_recon_uav
+  - enemy_long_range_ad
+  - enemy_medium_range_ad
+  - enemy_short_range_ad
+  - enemy_manpads
+  - air_defense_mission
+  - ad_concept
+  - protection_priority
+  - weapons_control
+  - phase_1_early_warning
+  - phase_1_active_defense
+  - phase_1_passive_defense
+  - phase_2_early_warning
+  - phase_2_active_defense
+  - phase_2_passive_defense
+  - phase_3_early_warning
+  - phase_3_active_defense
+  - phase_3_passive_defense
+  - ad_warning
+  - weapons_status
+  - ad_roe
+  - iff_procedures
+  - long_range_coverage
+  - long_range_engagement
+  - long_range_control
+  - medium_range_coverage
+  - medium_range_engagement
+  - medium_range_control
+  - short_range_coverage
+  - short_range_engagement
+  - short_range_control
+  - ground_radar
+  - airborne_warning
+  - naval_radar
+  - recognized_air
+  - data_links
+  - info_flow
+  - camouflage_plan
+  - dispersion_plan
+  - hardening_plan
+  - adoc_location
+  - alt_adoc
+  - soc_locations
+  - primary_nets
+  - alternate_nets
+  - emergency_comms

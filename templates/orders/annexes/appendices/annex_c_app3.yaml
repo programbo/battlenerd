@@ -1,0 +1,188 @@
+template: |
+  APPENDIX 3 (SCHEME OF MANEUVER OVERLAY) TO ANNEX C TO OPORD $operation_name
+  References: $references
+  Time Zone Used Throughout: $time_zone
+
+  1. PURPOSE
+  ----------
+  $purpose
+
+  2. GENERAL
+  ----------
+  a. Base Map Information
+     (1) Map Series: $map_series
+     (2) Sheets: $map_sheets
+     (3) Scale: $map_scale
+     (4) Datum: $map_datum
+
+  b. Overlay Information
+     (1) Effective Time: $effective_time
+     (2) Classification: $classification
+     (3) Control Copy Number: $copy_number
+
+  3. PHASE 1 (SHAPING)
+  -------------------
+  a. Boundaries
+     (1) Area of Operations
+         $phase_1_ao
+     (2) Unit Boundaries
+         $phase_1_boundaries
+     (3) Fire Support Coordination
+         $phase_1_fscm
+
+  b. Control Measures
+     (1) Objectives
+         $phase_1_objectives
+     (2) Phase Lines
+         $phase_1_phase_lines
+     (3) Coordination Points
+         $phase_1_coord_points
+
+  c. Unit Positions
+     (1) Initial Positions
+         $phase_1_init_positions
+     (2) Subsequent Positions
+         $phase_1_subseq_positions
+     (3) Support Positions
+         $phase_1_support_positions
+
+  4. PHASE 2 (DECISIVE)
+  --------------------
+  a. Boundaries
+     (1) Area of Operations
+         $phase_2_ao
+     (2) Unit Boundaries
+         $phase_2_boundaries
+     (3) Fire Support Coordination
+         $phase_2_fscm
+
+  b. Control Measures
+     (1) Objectives
+         $phase_2_objectives
+     (2) Phase Lines
+         $phase_2_phase_lines
+     (3) Coordination Points
+         $phase_2_coord_points
+
+  c. Unit Positions
+     (1) Landing Zones
+         $landing_zones
+     (2) Beach Support Areas
+         $beach_support_areas
+     (3) Support Positions
+         $phase_2_support_positions
+
+  5. PHASE 3 (EXPLOITATION)
+  -----------------------
+  a. Boundaries
+     (1) Area of Operations
+         $phase_3_ao
+     (2) Unit Boundaries
+         $phase_3_boundaries
+     (3) Fire Support Coordination
+         $phase_3_fscm
+
+  b. Control Measures
+     (1) Objectives
+         $phase_3_objectives
+     (2) Phase Lines
+         $phase_3_phase_lines
+     (3) Coordination Points
+         $phase_3_coord_points
+
+  c. Urban Operations
+     (1) Key Terrain
+         $urban_key_terrain
+     (2) Avenues of Approach
+         $urban_avenues
+     (3) Support Positions
+         $phase_3_support_positions
+
+  6. PHASE 4 (TRANSITION)
+  ----------------------
+  a. Boundaries
+     (1) Area of Operations
+         $phase_4_ao
+     (2) Unit Boundaries
+         $phase_4_boundaries
+     (3) Fire Support Coordination
+         $phase_4_fscm
+
+  b. Control Measures
+     (1) Objectives
+         $phase_4_objectives
+     (2) Phase Lines
+         $phase_4_phase_lines
+     (3) Coordination Points
+         $phase_4_coord_points
+
+  c. Transition Areas
+     (1) Handover Zones
+         $handover_zones
+     (2) Support Areas
+         $phase_4_support_areas
+     (3) Control Points
+         $phase_4_control_points
+
+  7. SUPPORTING OVERLAYS
+  --------------------
+  a. Fire Support Overlay
+     $fire_support_overlay
+
+  b. Engineer Overlay
+     $engineer_overlay
+
+  c. Air Operations Overlay
+     $air_ops_overlay
+
+variables:
+  - operation_name
+  - references
+  - time_zone
+  - purpose
+  - map_series
+  - map_sheets
+  - map_scale
+  - map_datum
+  - effective_time
+  - classification
+  - copy_number
+  - phase_1_ao
+  - phase_1_boundaries
+  - phase_1_fscm
+  - phase_1_objectives
+  - phase_1_phase_lines
+  - phase_1_coord_points
+  - phase_1_init_positions
+  - phase_1_subseq_positions
+  - phase_1_support_positions
+  - phase_2_ao
+  - phase_2_boundaries
+  - phase_2_fscm
+  - phase_2_objectives
+  - phase_2_phase_lines
+  - phase_2_coord_points
+  - landing_zones
+  - beach_support_areas
+  - phase_2_support_positions
+  - phase_3_ao
+  - phase_3_boundaries
+  - phase_3_fscm
+  - phase_3_objectives
+  - phase_3_phase_lines
+  - phase_3_coord_points
+  - urban_key_terrain
+  - urban_avenues
+  - phase_3_support_positions
+  - phase_4_ao
+  - phase_4_boundaries
+  - phase_4_fscm
+  - phase_4_objectives
+  - phase_4_phase_lines
+  - phase_4_coord_points
+  - handover_zones
+  - phase_4_support_areas
+  - phase_4_control_points
+  - fire_support_overlay
+  - engineer_overlay
+  - air_ops_overlay

@@ -1,0 +1,21 @@
+template: |
+  Situation Report:
+
+  Location: $location
+  Status: $status
+  Key Points:
+  $points
+
+  Additional Information:
+  $details
+
+  Last Updated: $timestamp
+  Source: $source
+
+variables:
+  - location
+  - status
+  - points
+  - details
+  - timestamp
+  - source

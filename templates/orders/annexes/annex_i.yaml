@@ -1,0 +1,158 @@
+template: |
+  ANNEX I (INFORMATION OPERATIONS) TO OPORD $operation_name
+  References: $references
+  Time Zone Used Throughout: $time_zone
+
+  1. SITUATION
+  ------------
+  a. Information Environment
+     (1) Physical Dimension
+         $physical_dimension
+     (2) Information Dimension
+         $info_dimension
+     (3) Cognitive Dimension
+         $cognitive_dimension
+
+  b. Enemy Information Operations
+     (1) Capabilities
+         $enemy_io_capabilities
+     (2) Vulnerabilities
+         $enemy_io_vulnerabilities
+     (3) Most Likely IO COA
+         $enemy_io_likely
+     (4) Most Dangerous IO COA
+         $enemy_io_dangerous
+
+  c. Friendly Information Operations
+     (1) Higher HQ IO Concept
+         $higher_io_concept
+     (2) Adjacent Unit IO
+         $adjacent_io
+     (3) Supporting IO
+         $supporting_io
+
+  2. MISSION
+  ----------
+  $io_mission
+
+  3. EXECUTION
+  -----------
+  a. IO Concept of Operations
+     (1) Overall Concept
+         $io_concept
+     (2) Desired Effects
+         $desired_effects
+     (3) End State
+         $io_end_state
+
+  b. IO Tasks by Phase
+     Phase 1 (Shaping): $io_phase_1
+     Phase 2 (Decisive): $io_phase_2
+     Phase 3 (Exploitation): $io_phase_3
+     Phase 4 (Transition): $io_phase_4
+
+  c. IO Core Capabilities
+     (1) Electronic Warfare
+         $ew_tasks
+     (2) Computer Network Operations
+         $cno_tasks
+     (3) Psychological Operations
+         $psyops_tasks
+     (4) Military Deception
+         $mildec_tasks
+     (5) Operations Security
+         $opsec_tasks
+
+  d. IO Supporting Capabilities
+     (1) Information Assurance
+         $ia_tasks
+     (2) Physical Security
+         $physical_security
+     (3) Counter Intelligence
+         $ci_tasks
+     (4) Combat Camera
+         $comcam_tasks
+
+  e. Related Capabilities
+     (1) Public Affairs
+         $pa_tasks
+     (2) Civil-Military Operations
+         $cmo_tasks
+     (3) Defense Support to Public Diplomacy
+         $dspd_tasks
+
+  4. SERVICE SUPPORT
+  -----------------
+  a. IO Personnel
+     $io_personnel
+
+  b. IO Equipment
+     $io_equipment
+
+  5. COMMAND AND SIGNAL
+  --------------------
+  a. Command
+     (1) IO Cell Location
+         $io_cell_location
+     (2) IO Working Group
+         $io_working_group
+
+  b. Signal
+     (1) IO Networks
+         $io_networks
+     (2) Special Instructions
+         $io_spins
+
+  APPENDICES:
+  -----------
+  1. Military Deception
+  2. Electronic Warfare
+  3. Operations Security
+  4. Psychological Operations
+  5. Computer Network Operations
+  6. Information Assurance
+  7. Physical Security
+  8. Counter Intelligence
+  9. Combat Camera
+  10. Public Affairs
+
+variables:
+  - operation_name
+  - references
+  - time_zone
+  - physical_dimension
+  - info_dimension
+  - cognitive_dimension
+  - enemy_io_capabilities
+  - enemy_io_vulnerabilities
+  - enemy_io_likely
+  - enemy_io_dangerous
+  - higher_io_concept
+  - adjacent_io
+  - supporting_io
+  - io_mission
+  - io_concept
+  - desired_effects
+  - io_end_state
+  - io_phase_1
+  - io_phase_2
+  - io_phase_3
+  - io_phase_4
+  - ew_tasks
+  - cno_tasks
+  - psyops_tasks
+  - mildec_tasks
+  - opsec_tasks
+  - ia_tasks
+  - physical_security
+  - ci_tasks
+  - comcam_tasks
+  - pa_tasks
+  - cmo_tasks
+  - dspd_tasks
+  - io_personnel
+  - io_equipment
+  - io_cell_location
+  - io_working_group
+  - io_networks
+  - io_spins

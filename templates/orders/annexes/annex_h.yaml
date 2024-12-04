@@ -1,0 +1,179 @@
+template: |
+  ANNEX H (SIGNAL) TO OPORD $operation_name
+  References: $references
+  Time Zone Used Throughout: $time_zone
+
+  1. SITUATION
+  ------------
+  a. Enemy Forces
+     (1) Enemy Electronic Warfare Capabilities
+         $enemy_ew_capabilities
+     (2) Enemy SIGINT Capabilities
+         $enemy_sigint
+     (3) Enemy Cyber Capabilities
+         $enemy_cyber
+     (4) Enemy C2 Infrastructure
+         $enemy_c2_infrastructure
+
+  b. Friendly Forces
+     (1) Higher HQ Communications
+         $higher_comms
+     (2) Adjacent Unit Communications
+         $adjacent_comms
+     (3) Supporting Communications
+         $supporting_comms
+
+  c. Joint/Coalition Considerations
+     (1) Interoperability Requirements
+         $interop_requirements
+     (2) Coalition Systems
+         $coalition_systems
+     (3) Host Nation Support
+         $host_nation_comms
+
+  2. MISSION
+  ----------
+  $signal_mission
+
+  3. EXECUTION
+  -----------
+  a. Concept of Signal Support
+     (1) General Concept
+         $signal_concept
+     (2) Priority of Support
+         $signal_priority
+     (3) Risk Management
+         $signal_risk
+
+  b. Network Operations
+     (1) Network Architecture
+         $network_architecture
+     (2) Network Defense
+         $network_defense
+     (3) Information Assurance
+         $info_assurance
+     (4) Spectrum Management
+         $spectrum_management
+
+  c. Communications Systems
+     (1) Tactical Communications
+         (a) Combat Net Radio
+             $combat_net_radio
+         (b) Tactical Data Networks
+             $tactical_data
+         (c) Satellite Communications
+             $satcom
+
+     (2) Strategic Communications
+         (a) Long-haul Systems
+             $long_haul
+         (b) Coalition Networks
+             $coalition_networks
+         (c) Reach-back Systems
+             $reach_back
+
+     (3) Joint Systems
+         (a) Joint Command Networks
+             $joint_networks
+         (b) Joint Intelligence Systems
+             $joint_intel
+         (c) Joint Fires Networks
+             $joint_fires
+
+  d. Support by Phase
+     Phase 1 (Shaping): $phase_1_signal
+     Phase 2 (Decisive): $phase_2_signal
+     Phase 3 (Exploitation): $phase_3_signal
+     Phase 4 (Transition): $phase_4_signal
+
+  4. SERVICE SUPPORT
+  -----------------
+  a. Signal Equipment
+     (1) Communications Security Material
+         $comsec_material
+     (2) Signal Equipment Maintenance
+         $signal_maintenance
+     (3) Signal Supply
+         $signal_supply
+
+  b. Signal Support
+     (1) Help Desk Operations
+         $help_desk
+     (2) Network Operations Center
+         $noc_ops
+     (3) Frequency Management
+         $freq_management
+
+  5. COMMAND AND SIGNAL
+  --------------------
+  a. Command
+     (1) Signal Chain of Command
+         $signal_command
+     (2) Reporting Requirements
+         $signal_reporting
+
+  b. Control
+     (1) Network Control Measures
+         $network_control
+     (2) COMSEC Procedures
+         $comsec_procedures
+     (3) Emission Control
+         $emcon
+
+  APPENDICES:
+  -----------
+  1. Network Architecture Diagrams
+  2. Communications Security
+  3. Frequency Management
+  4. Joint Communications
+  5. Coalition Communications
+  6. Cyber Defense
+  7. Signal Support Overlay
+  8. PACE Plans
+
+variables:
+  - operation_name
+  - references
+  - time_zone
+  - enemy_ew_capabilities
+  - enemy_sigint
+  - enemy_cyber
+  - enemy_c2_infrastructure
+  - higher_comms
+  - adjacent_comms
+  - supporting_comms
+  - interop_requirements
+  - coalition_systems
+  - host_nation_comms
+  - signal_mission
+  - signal_concept
+  - signal_priority
+  - signal_risk
+  - network_architecture
+  - network_defense
+  - info_assurance
+  - spectrum_management
+  - combat_net_radio
+  - tactical_data
+  - satcom
+  - long_haul
+  - coalition_networks
+  - reach_back
+  - joint_networks
+  - joint_intel
+  - joint_fires
+  - phase_1_signal
+  - phase_2_signal
+  - phase_3_signal
+  - phase_4_signal
+  - comsec_material
+  - signal_maintenance
+  - signal_supply
+  - help_desk
+  - noc_ops
+  - freq_management
+  - signal_command
+  - signal_reporting
+  - network_control
+  - comsec_procedures
+  - emcon

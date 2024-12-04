@@ -1,0 +1,204 @@
+template: |
+  OPERATION ORDER $operation_name
+  References: $references
+  Time Zone Used Throughout the Order: $time_zone
+  Task Organisation: $task_org
+
+  1. SITUATION
+  ------------
+  a. General
+     $situation_general
+
+  b. Enemy Forces
+     (1) Composition, Disposition, and Strength
+         $enemy_composition
+     (2) Recent and Present Significant Activities
+         $enemy_activities
+     (3) Capabilities
+         $enemy_capabilities
+     (4) Most Likely Course of Action
+         $enemy_likely_coa
+     (5) Most Dangerous Course of Action
+         $enemy_dangerous_coa
+
+  c. Friendly Forces
+     (1) Higher HQ Mission
+         $higher_mission
+     (2) Adjacent Units
+         $adjacent_units
+     (3) Supporting Forces
+         $supporting_forces
+
+  d. Attachments and Detachments
+     $attachments_detachments
+
+  e. Civil Considerations
+     $civil_considerations
+
+  2. MISSION
+  ----------
+  $mission
+
+  3. EXECUTION
+  -----------
+  a. Commander's Intent
+     (1) Purpose
+         $purpose
+     (2) Key Tasks
+         $key_tasks
+     (3) End State
+         $end_state
+
+  b. Concept of Operations
+     $concept_of_ops
+
+  c. Scheme of Manoeuvre
+     Phase 1: $phase_1
+     Phase 2: $phase_2
+     Phase 3: $phase_3
+     Phase 4: $phase_4
+
+  d. Tasks to Combat Units
+     $combat_tasks
+
+  e. Tasks to Combat Support Units
+     $support_tasks
+
+  f. Coordinating Instructions
+     (1) Timeline
+         $timeline
+     (2) Control Measures
+         $control_measures
+     (3) Rules of Engagement
+         $roe
+     (4) Environmental Considerations
+         $environmental
+     (5) Force Protection
+         $force_protection
+
+  4. SERVICE SUPPORT
+  -----------------
+  a. Concept of Support
+     $support_concept
+
+  b. Materiel and Services
+     (1) Supply
+         $supply
+     (2) Transportation
+         $transportation
+     (3) Maintenance
+         $maintenance
+     (4) Medical
+         $medical
+
+  c. Personnel
+     $personnel
+
+  5. COMMAND AND SIGNAL
+  --------------------
+  a. Command
+     (1) Location of Commander
+         $commander_location
+     (2) Succession of Command
+         $succession
+     (3) Liaison Requirements
+         $liaison
+
+  b. Control
+     (1) Command Posts
+         $command_posts
+     (2) Reports
+         $reports
+
+  c. Signal
+     (1) Communications
+         $communications
+     (2) Electronic Warfare
+         $electronic_warfare
+     (3) COMSEC
+         $comsec
+
+  ANNEXES:
+  --------
+  A - Task Organization
+  B - Intelligence
+  C - Operations
+  D - Fires
+  E - Protection
+  F - Sustainment
+  G - Engineer
+  H - Signal
+  I - Information Operations
+  J - Civil Affairs
+  K - Reports
+  L - Environmental Considerations
+  M - Host Nation Support
+  N - Space Operations
+  O - Chemical, Biological, Radiological, and Nuclear Operations
+  P - Personnel Recovery
+  Q - Knowledge Management
+  R - Reports
+  S - Special Technical Operations
+  T - Spare
+  U - Inspector General
+  V - Interagency Coordination
+  W - Aviation Operations
+  X - Spare
+  Y - Spare
+  Z - Distribution
+
+  ACKNOWLEDGEMENT INSTRUCTIONS
+  ---------------------------
+  $ack_instructions
+
+  OFFICIAL:
+  $official_signature
+
+variables:
+  - operation_name
+  - references
+  - time_zone
+  - task_org
+  - situation_general
+  - enemy_composition
+  - enemy_activities
+  - enemy_capabilities
+  - enemy_likely_coa
+  - enemy_dangerous_coa
+  - higher_mission
+  - adjacent_units
+  - supporting_forces
+  - attachments_detachments
+  - civil_considerations
+  - mission
+  - purpose
+  - key_tasks
+  - end_state
+  - concept_of_ops
+  - phase_1
+  - phase_2
+  - phase_3
+  - phase_4
+  - combat_tasks
+  - support_tasks
+  - timeline
+  - control_measures
+  - roe
+  - environmental
+  - force_protection
+  - support_concept
+  - supply
+  - transportation
+  - maintenance
+  - medical
+  - personnel
+  - commander_location
+  - succession
+  - liaison
+  - command_posts
+  - reports
+  - communications
+  - electronic_warfare
+  - comsec
+  - ack_instructions
+  - official_signature

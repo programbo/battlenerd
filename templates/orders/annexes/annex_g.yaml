@@ -1,0 +1,179 @@
+template: |
+  ANNEX G (ENGINEER) TO OPORD $operation_name
+  References: $references
+  Time Zone Used Throughout: $time_zone
+
+  1. SITUATION
+  ------------
+  a. Enemy Forces
+     (1) Engineer Capabilities
+         $enemy_engineer
+     (2) Obstacle Systems
+         $enemy_obstacles
+     (3) Fortifications
+         $enemy_fortifications
+     (4) Mobility Assets
+         $enemy_mobility
+
+  b. Friendly Forces
+     (1) Higher HQ Engineer Support
+         $higher_engineer
+     (2) Adjacent Unit Engineers
+         $adjacent_engineer
+     (3) Supporting Engineers
+         $supporting_engineer
+
+  c. Environment
+     (1) Terrain Analysis
+         $terrain_analysis
+     (2) Weather Effects
+         $weather_effects
+     (3) Beach Analysis
+         $beach_analysis
+     (4) Port Facilities
+         $port_facilities
+
+  2. MISSION
+  ----------
+  $engineer_mission
+
+  3. EXECUTION
+  -----------
+  a. Concept of Engineer Operations
+     (1) General Concept
+         $engineer_concept
+     (2) Priority of Support
+         $engineer_priority
+     (3) Risk Management
+         $engineer_risk
+
+  b. Tasks by Function
+     (1) Mobility
+         (a) Beach Clearance
+             $beach_clearance
+         (b) Route Clearance
+             $route_clearance
+         (c) Obstacle Reduction
+             $obstacle_reduction
+         (d) Gap Crossing
+             $gap_crossing
+
+     (2) Counter-mobility
+         (a) Obstacle Plan
+             $obstacle_plan
+         (b) Barrier Plan
+             $barrier_plan
+         (c) Mine Warfare
+             $mine_warfare
+
+     (3) Survivability
+         (a) Fighting Positions
+             $fighting_positions
+         (b) Protective Positions
+             $protective_positions
+         (c) Hardening
+             $hardening
+
+     (4) General Engineering
+         (a) Port Repair
+             $port_repair
+         (b) Airfield Repair
+             $airfield_repair
+         (c) Infrastructure Support
+             $infrastructure_support
+
+  c. Tasks by Phase
+     Phase 1 (Shaping): $phase_1_engineer
+     Phase 2 (Decisive): $phase_2_engineer
+     Phase 3 (Exploitation): $phase_3_engineer
+     Phase 4 (Transition): $phase_4_engineer
+
+  4. SUSTAINMENT
+  -------------
+  a. Logistics
+     (1) Class IV/V
+         $engineer_supply
+     (2) Equipment Support
+         $equipment_support
+     (3) Maintenance
+         $engineer_maintenance
+
+  b. Personnel
+     (1) Engineer Units
+         $engineer_units
+     (2) Specialized Teams
+         $specialized_teams
+     (3) Equipment Operators
+         $equipment_operators
+
+  5. COMMAND AND SIGNAL
+  --------------------
+  a. Command
+     (1) Engineer Chain of Command
+         $engineer_command
+     (2) Support Relationships
+         $support_relationships
+
+  b. Control
+     (1) Control Measures
+         $engineer_control
+     (2) Reports
+         $engineer_reports
+
+  APPENDICES:
+  -----------
+  1. Engineer Overlay
+  2. Obstacle Overlay
+  3. Beach Studies
+  4. Port Studies
+  5. Route Classification
+  6. Lines of Communication
+  7. Environmental Considerations
+  8. Force Bed-down
+
+variables:
+  - operation_name
+  - references
+  - time_zone
+  - enemy_engineer
+  - enemy_obstacles
+  - enemy_fortifications
+  - enemy_mobility
+  - higher_engineer
+  - adjacent_engineer
+  - supporting_engineer
+  - terrain_analysis
+  - weather_effects
+  - beach_analysis
+  - port_facilities
+  - engineer_mission
+  - engineer_concept
+  - engineer_priority
+  - engineer_risk
+  - beach_clearance
+  - route_clearance
+  - obstacle_reduction
+  - gap_crossing
+  - obstacle_plan
+  - barrier_plan
+  - mine_warfare
+  - fighting_positions
+  - protective_positions
+  - hardening
+  - port_repair
+  - airfield_repair
+  - infrastructure_support
+  - phase_1_engineer
+  - phase_2_engineer
+  - phase_3_engineer
+  - phase_4_engineer
+  - engineer_supply
+  - equipment_support
+  - engineer_maintenance
+  - engineer_units
+  - specialized_teams
+  - equipment_operators
+  - engineer_command
+  - support_relationships
+  - engineer_control
+  - engineer_reports

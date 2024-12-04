@@ -1,0 +1,136 @@
+information_summary:
+  critical: true
+  reason: "Core IMAP component - provides situation understanding"
+  priority: 1
+  required_context:
+    - situation
+    - background
+    - current_state
+  validation_rules:
+    - min_length: 100
+    - must_include: ["who", "what", "where", "when"]
+
+known_facts:
+  critical: true
+  reason: "Required for analysis validity"
+  priority: 1
+  required_context:
+    - confirmed_intelligence
+    - verified_reports
+  validation_rules:
+    - min_items: 3
+    - must_be_verifiable: true
+
+assumptions:
+  critical: false
+  reason: "Needed for complete analysis"
+  priority: 2
+  required_context:
+    - intelligence_gaps
+    - historical_patterns
+  validation_rules:
+    - must_be_labeled_assumption: true
+    - must_include_confidence_level: true
+
+coa_development:
+  critical: true
+  reason: "Required for operational planning"
+  priority: 1
+  required_context:
+    - friendly_capabilities
+    - enemy_capabilities
+    - terrain_effects
+    - time_available
+    - constraints
+  validation_rules:
+    - min_coas: 2
+    - must_be_suitable: true
+    - must_be_feasible: true
+    - must_be_acceptable: true
+    - must_be_distinguishable: true
+    - must_be_complete: true
+
+coa_analysis:
+  critical: true
+  reason: "Required for decision making"
+  priority: 1
+  required_context:
+    - evaluation_criteria
+    - relative_weights
+    - advantages
+    - disadvantages
+  validation_rules:
+    - must_include_all_coas: true
+    - must_use_consistent_criteria: true
+    - must_show_comparison: true
+
+decision_matrix:
+  critical: true
+  reason: "Required for COA selection"
+  priority: 1
+  required_context:
+    - criteria_weights
+    - coa_scores
+    - analysis_method
+  validation_rules:
+    - must_include_all_criteria: true
+    - must_show_calculations: true
+    - must_justify_weights: true
+    - must_include_recommendation: true
+
+mission_analysis:
+  critical: true
+  reason: "Required to understand commander's intent and requirements"
+  priority: 1
+  required_context:
+    - mission_statement
+    - commanders_intent
+    - specified_tasks
+    - implied_tasks
+    - constraints
+    - restraints
+  validation_rules:
+    - must_align_with_higher_intent: true
+    - must_identify_all_tasks: true
+    - must_list_constraints: true
+
+deductions_judgments:
+  critical: true
+  reason: "Required to show analytical reasoning"
+  priority: 1
+  required_context:
+    - key_facts
+    - analysis_points
+    - supporting_evidence
+  validation_rules:
+    - must_link_to_facts: true
+    - must_show_reasoning: true
+    - must_support_conclusions: true
+
+recommendations:
+  critical: true
+  reason: "Required to support decision making"
+  priority: 1
+  required_context:
+    - immediate_actions
+    - future_considerations
+    - risk_assessment
+    - resource_requirements
+  validation_rules:
+    - must_be_actionable: true
+    - must_address_risks: true
+    - must_align_with_capabilities: true
+
+information_gaps:
+  critical: true
+  reason: "Required for collection planning"
+  priority: 1
+  required_context:
+    - critical_gaps
+    - collection_requirements
+    - priority_intelligence_requirements
+    - time_constraints
+  validation_rules:
+    - must_prioritize_requirements: true
+    - must_link_to_decisions: true
+    - must_specify_timelines: true

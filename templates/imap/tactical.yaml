@@ -1,0 +1,68 @@
+template: |
+  TACTICAL IMAP ANALYSIS
+  =====================
+
+  1. INFORMATION
+  -------------
+  $information_summary
+
+  2. MEANING
+  ----------
+  a. Tactical Situation:
+  $tactical_context
+
+  b. Known Tactical Factors:
+  $known_facts
+
+  c. Tactical Assumptions:
+  $assumptions
+
+  d. Tactical Intelligence Gaps:
+  $gaps
+
+  3. ACTION
+  ---------
+  a. Immediate Actions Required:
+  $required_actions
+
+  b. Tactical Priority:
+  $priority
+
+  c. Combat Support Requirements:
+  $combat_support
+
+  4. PREDICTION
+  ------------
+  a. Expected Tactical Outcomes:
+  $likely_outcome
+
+  b. Alternative Tactical Scenarios:
+  $other_possibilities
+
+  c. Immediate Warning Signs:
+  $warning_signs
+
+  CONFIDENCE ASSESSMENT
+  --------------------
+  Information Reliability: $info_reliability
+  Tactical Analysis Confidence: $analytical_confidence
+
+  TACTICAL RECOMMENDATIONS
+  -----------------------
+  $recommendations
+
+variables:
+  - information_summary
+  - tactical_context
+  - known_facts
+  - assumptions
+  - gaps
+  - required_actions
+  - priority
+  - combat_support
+  - likely_outcome
+  - other_possibilities
+  - warning_signs
+  - info_reliability
+  - analytical_confidence
+  - recommendations

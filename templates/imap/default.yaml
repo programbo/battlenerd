@@ -1,0 +1,60 @@
+template: |
+  IMAP ANALYSIS REPORT
+  ===================
+
+  1. INFORMATION
+  -------------
+  $information_summary
+
+  2. MEANING
+  ----------
+  a. What we know:
+  $known_facts
+
+  b. What we think we know:
+  $assumptions
+
+  c. What we don't know:
+  $gaps
+
+  3. ACTION
+  ---------
+  a. Actions Required:
+  $required_actions
+
+  b. Priority:
+  $priority
+
+  4. PREDICTION
+  ------------
+  a. Most Likely Outcome:
+  $likely_outcome
+
+  b. Other Possibilities:
+  $other_possibilities
+
+  c. Warning Signs:
+  $warning_signs
+
+  CONFIDENCE ASSESSMENT
+  --------------------
+  Information Reliability: $info_reliability
+  Analytical Confidence: $analytical_confidence
+
+  RECOMMENDATIONS
+  --------------
+  $recommendations
+
+variables:
+  - information_summary
+  - known_facts
+  - assumptions
+  - gaps
+  - required_actions
+  - priority
+  - likely_outcome
+  - other_possibilities
+  - warning_signs
+  - info_reliability
+  - analytical_confidence
+  - recommendations

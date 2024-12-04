@@ -1,0 +1,141 @@
+template: |
+  TACTICAL IMAP: SUBMARINE OPERATIONS
+  =================================
+
+  1. INFORMATION
+  -------------
+  a. Maritime Environment:
+  - Area of Operations: $ao_description
+  - Water Conditions: $water_conditions
+  - Acoustic Environment: $acoustic_environment
+  - Shipping Activity: $shipping_activity
+
+  b. Enemy Assessment:
+  - ASW Capabilities: $asw_capabilities
+  - Surface Assets: $surface_assets
+  - Air Assets: $air_assets
+  - Sensor Networks: $sensor_networks
+
+  c. Friendly Forces:
+  - Submarine Capabilities: $sub_capabilities
+  - Support Elements: $support_elements
+  - Adjacent Units: $adjacent_units
+  - Safe Havens: $safe_havens
+
+  2. MEANING
+  ----------
+  a. Tactical Analysis:
+  - Detection Risks: $detection_risks
+  - Engagement Zones: $engagement_zones
+  - Escape Routes: $escape_routes
+  - Bottom Topography: $bottom_topo
+
+  b. Environmental Factors:
+  - Thermal Layers: $thermal_layers
+  - Current Patterns: $currents
+  - Background Noise: $background_noise
+  - Weather Impact: $weather_impact
+
+  c. Mission Constraints:
+  - ROE: $rules_of_engagement
+  - Depth Restrictions: $depth_restrictions
+  - Communications: $comms_restrictions
+  - Weapons Employment: $weapons_constraints
+
+  3. ACTION
+  ---------
+  a. Primary Operations:
+  - Search Methods: $search_methods
+  - Attack Procedures: $attack_procedures
+  - Evasion Plans: $evasion_plans
+  - Emergency Actions: $emergency_actions
+
+  b. Control Measures:
+  - Patrol Zones: $patrol_zones
+  - Depth Bands: $depth_bands
+  - Safe Sectors: $safe_sectors
+  - Rendezvous Points: $rdv_points
+
+  c. Support Requirements:
+  - Intelligence Support: $intel_support
+  - Logistics: $logistics_requirements
+  - Communications: $comms_support
+  - Medical: $medical_support
+
+  4. PREDICTION
+  ------------
+  a. Most Likely Enemy Actions:
+  - Detection Methods: $likely_detection
+  - Prosecution Plans: $prosecution_plans
+  - Force Coordination: $force_coordination
+
+  b. Most Dangerous Enemy Actions:
+  - ASW Operations: $asw_operations
+  - Area Denial: $area_denial
+  - Force Concentration: $force_concentration
+
+  c. Decision Points:
+  - Attack Criteria: $attack_criteria
+  - Abort Criteria: $abort_criteria
+  - Emergency Actions: $emergency_criteria
+
+  CONFIDENCE ASSESSMENT
+  --------------------
+  Intelligence Reliability: $intel_reliability
+  Environmental Assessment: $environment_confidence
+  Overall Confidence: $overall_confidence
+
+  RECOMMENDATIONS
+  --------------
+  $recommendations
+
+variables:
+  - ao_description
+  - water_conditions
+  - acoustic_environment
+  - shipping_activity
+  - asw_capabilities
+  - surface_assets
+  - air_assets
+  - sensor_networks
+  - sub_capabilities
+  - support_elements
+  - adjacent_units
+  - safe_havens
+  - detection_risks
+  - engagement_zones
+  - escape_routes
+  - bottom_topo
+  - thermal_layers
+  - currents
+  - background_noise
+  - weather_impact
+  - rules_of_engagement
+  - depth_restrictions
+  - comms_restrictions
+  - weapons_constraints
+  - search_methods
+  - attack_procedures
+  - evasion_plans
+  - emergency_actions
+  - patrol_zones
+  - depth_bands
+  - safe_sectors
+  - rdv_points
+  - intel_support
+  - logistics_requirements
+  - comms_support
+  - medical_support
+  - likely_detection
+  - prosecution_plans
+  - force_coordination
+  - asw_operations
+  - area_denial
+  - force_concentration
+  - attack_criteria
+  - abort_criteria
+  - emergency_criteria
+  - intel_reliability
+  - environment_confidence
+  - overall_confidence
+  - recommendations

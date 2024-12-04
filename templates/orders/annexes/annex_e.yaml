@@ -1,0 +1,165 @@
+template: |
+  ANNEX E (PROTECTION) TO OPORD $operation_name
+  References: $references
+  Time Zone Used Throughout: $time_zone
+
+  1. SITUATION
+  ------------
+  a. Enemy Forces
+     (1) Air and Missile Threats
+         $air_missile_threats
+     (2) CBRN Capabilities
+         $cbrn_capabilities
+     (3) Cyber Threats
+         $cyber_threats
+     (4) Asymmetric Threats
+         $asymmetric_threats
+
+  b. Friendly Forces
+     (1) Higher HQ Protection
+         $higher_protection
+     (2) Adjacent Unit Protection
+         $adjacent_protection
+     (3) Supporting Protection
+         $supporting_protection
+
+  c. Environment
+     (1) Terrain Effects
+         $terrain_protection
+     (2) Weather Effects
+         $weather_protection
+     (3) Civil Considerations
+         $civil_protection
+
+  2. MISSION
+  ----------
+  $protection_mission
+
+  3. EXECUTION
+  -----------
+  a. Concept of Protection
+     (1) General Concept
+         $protection_concept
+     (2) Priority of Protection
+         $protection_priority
+     (3) Risk Management
+         $risk_management
+
+  b. Tasks by Warfighting Function
+     (1) Air and Missile Defense
+         $amd_tasks
+     (2) CBRN Defense
+         $cbrn_tasks
+     (3) Counter-IED
+         $cied_tasks
+     (4) Antiterrorism
+         $antiterrorism_tasks
+     (5) Physical Security
+         $physical_security
+     (6) Operations Security
+         $opsec_tasks
+     (7) Information Protection
+         $info_protection
+
+  c. Tasks by Phase
+     Phase 1 (Shaping): $phase_1_protection
+     Phase 2 (Decisive): $phase_2_protection
+     Phase 3 (Exploitation): $phase_3_protection
+     Phase 4 (Transition): $phase_4_protection
+
+  d. Coordinating Instructions
+     (1) Force Protection Conditions
+         $fpcon
+     (2) Rules for Use of Force
+         $ruf
+     (3) Critical Asset List
+         $critical_assets
+     (4) Defended Asset List
+         $defended_assets
+
+  4. SUSTAINMENT
+  -------------
+  a. Logistics
+     (1) Protection Equipment
+         $protection_equipment
+     (2) Barrier Materials
+         $barrier_materials
+     (3) CBRN Equipment
+         $cbrn_equipment
+
+  b. Personnel
+     (1) Force Protection Personnel
+         $fp_personnel
+     (2) Security Forces
+         $security_forces
+     (3) AMD Personnel
+         $amd_personnel
+
+  5. COMMAND AND SIGNAL
+  --------------------
+  a. Command
+     (1) Protection Working Group
+         $protection_wg
+     (2) Reporting Requirements
+         $protection_reporting
+
+  b. Control
+     (1) Protection Control Measures
+         $protection_control
+     (2) Early Warning Systems
+         $early_warning
+
+  APPENDICES:
+  -----------
+  1. Air and Missile Defense
+  2. CBRN Defense
+  3. Counter-IED
+  4. Antiterrorism
+  5. Physical Security
+  6. Operations Security
+  7. Information Protection
+  8. Force Health Protection
+
+variables:
+  - operation_name
+  - references
+  - time_zone
+  - air_missile_threats
+  - cbrn_capabilities
+  - cyber_threats
+  - asymmetric_threats
+  - higher_protection
+  - adjacent_protection
+  - supporting_protection
+  - terrain_protection
+  - weather_protection
+  - civil_protection
+  - protection_mission
+  - protection_concept
+  - protection_priority
+  - risk_management
+  - amd_tasks
+  - cbrn_tasks
+  - cied_tasks
+  - antiterrorism_tasks
+  - physical_security
+  - opsec_tasks
+  - info_protection
+  - phase_1_protection
+  - phase_2_protection
+  - phase_3_protection
+  - phase_4_protection
+  - fpcon
+  - ruf
+  - critical_assets
+  - defended_assets
+  - protection_equipment
+  - barrier_materials
+  - cbrn_equipment
+  - fp_personnel
+  - security_forces
+  - amd_personnel
+  - protection_wg
+  - protection_reporting
+  - protection_control
+  - early_warning

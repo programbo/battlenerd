@@ -1,0 +1,132 @@
+template: |
+  ANNEX K (REPORTS) TO OPORD $operation_name
+  References: $references
+  Time Zone Used Throughout: $time_zone
+
+  1. PURPOSE
+  ----------
+  $reports_purpose
+
+  2. REPORT SUBMISSION
+  -------------------
+  a. General Instructions
+     (1) Report Classification
+         $report_classification
+     (2) Transmission Methods
+         $transmission_methods
+     (3) Precedence
+         $report_precedence
+
+  b. Reporting Schedule
+     (1) Routine Reports
+         $routine_schedule
+     (2) Periodic Reports
+         $periodic_schedule
+     (3) As Required Reports
+         $required_reports
+
+  3. REQUIRED REPORTS
+  ------------------
+  a. Intelligence Reports
+     (1) INTREP
+         $intrep_format
+     (2) INTSUM
+         $intsum_format
+     (3) SITREP
+         $sitrep_format
+
+  b. Operations Reports
+     (1) OPSUM
+         $opsum_format
+     (2) Battle Damage Assessment
+         $bda_format
+     (3) Contact Reports
+         $contact_format
+
+  c. Logistics Reports
+     (1) LOGSTAT
+         $logstat_format
+     (2) Ammunition Status
+         $ammo_status_format
+     (3) Equipment Status
+         $equipment_status_format
+
+  d. Personnel Reports
+     (1) Personnel Status
+         $perstat_format
+     (2) Casualty Reports
+         $casualty_format
+     (3) Strength Reports
+         $strength_format
+
+  4. SPECIAL REPORTS
+  -----------------
+  a. Air Support
+     (1) Close Air Support
+         $cas_report_format
+     (2) Air Defense
+         $air_defense_format
+
+  b. Fire Support
+     (1) Artillery Status
+         $artillery_report_format
+     (2) Target Acquisition
+         $target_report_format
+
+  c. Civil-Military
+     (1) Civil Affairs
+         $civil_affairs_format
+     (2) Humanitarian Assistance
+         $humanitarian_format
+
+  5. REPORT TRANSMISSION
+  ---------------------
+  a. Primary Methods
+     $primary_transmission
+
+  b. Alternate Methods
+     $alternate_transmission
+
+  c. Contingency Methods
+     $contingency_transmission
+
+  APPENDICES:
+  -----------
+  1. Report Formats
+  2. Report Schedule Matrix
+  3. Distribution Lists
+  4. Communication Methods
+  5. Special Instructions
+
+variables:
+  - operation_name
+  - references
+  - time_zone
+  - reports_purpose
+  - report_classification
+  - transmission_methods
+  - report_precedence
+  - routine_schedule
+  - periodic_schedule
+  - required_reports
+  - intrep_format
+  - intsum_format
+  - sitrep_format
+  - opsum_format
+  - bda_format
+  - contact_format
+  - logstat_format
+  - ammo_status_format
+  - equipment_status_format
+  - perstat_format
+  - casualty_format
+  - strength_format
+  - cas_report_format
+  - air_defense_format
+  - artillery_report_format
+  - target_report_format
+  - civil_affairs_format
+  - humanitarian_format
+  - primary_transmission
+  - alternate_transmission
+  - contingency_transmission

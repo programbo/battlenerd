@@ -1,0 +1,138 @@
+template: |
+  APPENDIX 2 (COUNTERINTELLIGENCE) TO ANNEX B TO OPORD $operation_name
+  References: $references
+  Time Zone Used Throughout: $time_zone
+
+  1. SITUATION
+  ------------
+  a. Enemy Intelligence Capabilities
+     (1) HUMINT
+         $enemy_humint
+     (2) SIGINT
+         $enemy_sigint
+     (3) IMINT
+         $enemy_imint
+     (4) OSINT
+         $enemy_osint
+
+  b. Enemy Intelligence Activities
+     (1) Known Collection Efforts
+         $known_collection
+     (2) Suspected Collection Efforts
+         $suspected_collection
+     (3) Patterns and Trends
+         $intel_patterns
+
+  c. Friendly Vulnerabilities
+     (1) OPSEC Vulnerabilities
+         $opsec_vulnerabilities
+     (2) Physical Vulnerabilities
+         $physical_vulnerabilities
+     (3) Technical Vulnerabilities
+         $technical_vulnerabilities
+
+  2. MISSION
+  ----------
+  $ci_mission
+
+  3. EXECUTION
+  -----------
+  a. Concept of CI Operations
+     (1) Priority Intelligence Requirements
+         $ci_pir
+     (2) Essential Elements of Friendly Information
+         $eefi
+     (3) Specific Orders and Requests
+         $ci_sor
+
+  b. Tasks by Phase
+     (1) Phase 1 (Shaping)
+         (a) CI Support to OPSEC
+             $phase_1_opsec
+         (b) CI Support to Deception
+             $phase_1_deception
+         (c) CI Support to Force Protection
+             $phase_1_force_protection
+
+     (2) Phase 2 (Decisive)
+         (a) CI Support to OPSEC
+             $phase_2_opsec
+         (b) CI Support to Deception
+             $phase_2_deception
+         (c) CI Support to Force Protection
+             $phase_2_force_protection
+
+     (3) Phase 3 (Exploitation)
+         (a) CI Support to OPSEC
+             $phase_3_opsec
+         (b) CI Support to Deception
+             $phase_3_deception
+         (c) CI Support to Force Protection
+             $phase_3_force_protection
+
+     (4) Phase 4 (Transition)
+         (a) CI Support to OPSEC
+             $phase_4_opsec
+         (b) CI Support to Deception
+             $phase_4_deception
+         (c) CI Support to Force Protection
+             $phase_4_force_protection
+
+  4. COORDINATING INSTRUCTIONS
+  --------------------------
+  a. CI Reporting Requirements
+     $ci_reporting
+
+  b. CI Collection Requirements
+     $ci_collection
+
+  c. CI Investigation Requirements
+     $ci_investigation
+
+  5. SUPPORT
+  ----------
+  a. Personnel Requirements
+     $ci_personnel
+
+  b. Equipment Requirements
+     $ci_equipment
+
+  c. Training Requirements
+     $ci_training
+
+variables:
+  - operation_name
+  - references
+  - time_zone
+  - enemy_humint
+  - enemy_sigint
+  - enemy_imint
+  - enemy_osint
+  - known_collection
+  - suspected_collection
+  - intel_patterns
+  - opsec_vulnerabilities
+  - physical_vulnerabilities
+  - technical_vulnerabilities
+  - ci_mission
+  - ci_pir
+  - eefi
+  - ci_sor
+  - phase_1_opsec
+  - phase_1_deception
+  - phase_1_force_protection
+  - phase_2_opsec
+  - phase_2_deception
+  - phase_2_force_protection
+  - phase_3_opsec
+  - phase_3_deception
+  - phase_3_force_protection
+  - phase_4_opsec
+  - phase_4_deception
+  - phase_4_force_protection
+  - ci_reporting
+  - ci_collection
+  - ci_investigation
+  - ci_personnel
+  - ci_equipment
+  - ci_training

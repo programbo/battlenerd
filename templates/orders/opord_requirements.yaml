@@ -1,0 +1,122 @@
+situation:
+  critical: true
+  reason: "Required for understanding operational context"
+  priority: 1
+  required_context:
+    - enemy_forces
+    - friendly_forces
+    - attachments_detachments
+    - terrain
+    - weather
+  validation_rules:
+    - must_include_all_forces: true
+    - must_include_terrain_analysis: true
+
+mission:
+  critical: true
+  reason: "Defines the operation's purpose"
+  priority: 1
+  required_context:
+    - who
+    - what
+    - when
+    - where
+    - why
+  validation_rules:
+    - must_be_task_and_purpose: true
+    - must_be_single_sentence: true
+    - must_include_end_state: true
+
+execution:
+  critical: true
+  reason: "Details how the operation will be conducted"
+  priority: 1
+  required_context:
+    - commanders_intent
+    - concept_of_operations
+    - tasks_to_units
+    - coordinating_instructions
+  validation_rules:
+    - must_include_phases: true
+    - must_include_main_effort: true
+    - must_include_end_state: true
+
+sustainment:
+  critical: true
+  reason: "Defines support for the operation"
+  priority: 1
+  required_context:
+    - logistics
+    - personnel
+    - health_service_support
+  validation_rules:
+    - must_address_all_classes_supply: true
+    - must_include_support_locations: true
+    - must_include_medical_plan: true
+
+command_and_signal:
+  critical: true
+  reason: "Establishes command relationships and communications"
+  priority: 1
+  required_context:
+    - command_posts
+    - succession_of_command
+    - signal_instructions
+  validation_rules:
+    - must_include_primary_alternate: true
+    - must_specify_reporting_requirements: true
+
+annexes:
+  critical: false
+  reason: "Provides detailed supporting information"
+  priority: 2
+  required_context:
+    - required_annexes
+    - annex_references
+  validation_rules:
+    - must_reference_if_used: true
+
+task_organization:
+  critical: true
+  reason: "Defines unit relationships and structure"
+  priority: 1
+  required_context:
+    - unit_assignments
+    - command_relationships
+  validation_rules:
+    - must_include_all_units: true
+    - must_specify_relationships: true
+
+time_references:
+  critical: true
+  reason: "Establishes timing for the operation"
+  priority: 1
+  required_context:
+    - time_zone
+    - h_hour
+    - phase_timings
+  validation_rules:
+    - must_specify_time_zone: true
+    - must_include_key_times: true
+
+authentication:
+  critical: true
+  reason: "Validates the order"
+  priority: 1
+  required_context:
+    - commanders_signature
+    - distribution
+  validation_rules:
+    - must_include_signature_block: true
+    - must_include_distribution_list: true
+
+classification:
+  critical: true
+  reason: "Establishes security requirements"
+  priority: 1
+  required_context:
+    - classification_level
+    - handling_instructions
+  validation_rules:
+    - must_mark_all_paragraphs: true
+    - must_include_overall_classification: true

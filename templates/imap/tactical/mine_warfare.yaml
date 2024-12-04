@@ -1,0 +1,199 @@
+template: |
+  TACTICAL IMAP: MINE WARFARE OPERATIONS
+  ====================================
+
+  1. INFORMATION
+  -------------
+  a. Area Assessment:
+  - Terrain Features: $terrain_features
+  - Soil Conditions: $soil_conditions
+  - Vegetation: $vegetation
+  - Weather Impact: $weather_impact
+
+  b. Mine Threat:
+  - Known Minefields: $known_minefields
+  - Suspected Areas: $suspected_areas
+  - Mine Types: $mine_types
+  - Fuzing Systems: $fuzing_systems
+
+  c. Friendly Resources:
+  - Detection Assets: $detection_assets
+  - Clearance Assets: $clearance_assets
+  - EOD Support: $eod_support
+  - Medical Support: $medical_support
+
+  2. MEANING
+  ----------
+  a. Pattern Analysis:
+  - Laying Patterns: $laying_patterns
+  - Density Estimates: $mine_density
+  - Age Assessment: $age_assessment
+  - Environmental Effects: $environmental_effects
+
+  b. Technical Assessment:
+  - Anti-Handling Devices: $anti_handling
+  - Booby Traps: $booby_traps
+  - Mixed Mining: $mixed_mining
+  - Electronic Warfare: $electronic_warfare
+
+  c. Operational Impact:
+  - Movement Restrictions: $movement_restrictions
+  - Tactical Limitations: $tactical_limitations
+  - Time Constraints: $time_constraints
+  - Resource Requirements: $resource_requirements
+
+  3. ACTION
+  ---------
+  a. Detection Plan:
+  - Search Methods: $search_methods
+  - Equipment Usage: $equipment_usage
+  - Marking System: $marking_system
+  - Recording Process: $recording_process
+
+  b. Clearance Operations:
+  - Clearance Methods: $clearance_methods
+  - Safety Distances: $safety_distances
+  - Quality Control: $quality_control
+  - Documentation: $documentation
+
+  c. Support Requirements:
+  - Security Elements: $security_elements
+  - Medical Coverage: $medical_coverage
+  - Engineering Support: $engineering_support
+  - Logistics Support: $logistics_support
+
+  4. PREDICTION
+  ------------
+  a. Most Likely Hazards:
+  - Detection Challenges: $detection_challenges
+  - Clearance Issues: $clearance_issues
+  - Environmental Factors: $environmental_hazards
+  - Technical Problems: $technical_problems
+
+  b. Most Dangerous Hazards:
+  - Anti-Handling Activation: $anti_handling_risk
+  - Secondary Devices: $secondary_devices
+  - Equipment Failure: $equipment_failure
+  - Personnel Error: $personnel_error
+
+  c. Decision Points:
+  - Method Selection: $method_selection
+  - Risk Assessment: $risk_assessment
+  - Abort Criteria: $abort_criteria
+  - Contingency Plans: $contingency_plans
+
+  IMMEDIATE ACTION DRILLS
+  ----------------------
+  1. Detection Phase:
+  - Positive Signal: $signal_drill
+  - Equipment Failure: $equipment_drill
+  - Suspicious Item: $suspicious_item_drill
+
+  2. Clearance Phase:
+  - Mine Located: $mine_located_drill
+  - Unusual Device: $unusual_device_drill
+  - Accident Response: $accident_response
+
+  3. Emergency Procedures:
+  - Casualty Evacuation: $casevac_procedure
+  - Equipment Malfunction: $malfunction_procedure
+  - Weather Change: $weather_procedure
+
+  BATTLE PROCEDURE
+  ---------------
+  1. Preparation:
+  - Area Survey: $area_survey
+  - Equipment Checks: $equipment_checks
+  - Team Briefing: $team_briefing
+
+  2. Execution:
+  - Lane Marking: $lane_marking
+  - Progress Recording: $progress_recording
+  - Quality Checks: $quality_checks
+
+  3. Completion:
+  - Area Documentation: $area_documentation
+  - Handover Process: $handover_process
+  - After Action Review: $after_action_review
+
+  CONFIDENCE ASSESSMENT
+  --------------------
+  Detection Confidence: $detection_confidence
+  Clearance Confidence: $clearance_confidence
+  Overall Assessment: $overall_confidence
+
+  RECOMMENDATIONS
+  --------------
+  $recommendations
+
+variables:
+  - terrain_features
+  - soil_conditions
+  - vegetation
+  - weather_impact
+  - known_minefields
+  - suspected_areas
+  - mine_types
+  - fuzing_systems
+  - detection_assets
+  - clearance_assets
+  - eod_support
+  - medical_support
+  - laying_patterns
+  - mine_density
+  - age_assessment
+  - environmental_effects
+  - anti_handling
+  - booby_traps
+  - mixed_mining
+  - electronic_warfare
+  - movement_restrictions
+  - tactical_limitations
+  - time_constraints
+  - resource_requirements
+  - search_methods
+  - equipment_usage
+  - marking_system
+  - recording_process
+  - clearance_methods
+  - safety_distances
+  - quality_control
+  - documentation
+  - security_elements
+  - medical_coverage
+  - engineering_support
+  - logistics_support
+  - detection_challenges
+  - clearance_issues
+  - environmental_hazards
+  - technical_problems
+  - anti_handling_risk
+  - secondary_devices
+  - equipment_failure
+  - personnel_error
+  - method_selection
+  - risk_assessment
+  - abort_criteria
+  - contingency_plans
+  - signal_drill
+  - equipment_drill
+  - suspicious_item_drill
+  - mine_located_drill
+  - unusual_device_drill
+  - accident_response
+  - casevac_procedure
+  - malfunction_procedure
+  - weather_procedure
+  - area_survey
+  - equipment_checks
+  - team_briefing
+  - lane_marking
+  - progress_recording
+  - quality_checks
+  - area_documentation
+  - handover_process
+  - after_action_review
+  - detection_confidence
+  - clearance_confidence
+  - overall_confidence
+  - recommendations

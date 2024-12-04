@@ -1,0 +1,107 @@
+template: |
+  INFORMATION OPERATIONS IMAP
+  ==========================
+
+  1. INFORMATION
+  -------------
+  a. Information Environment:
+  - Physical: $physical_dimension
+  - Informational: $info_dimension
+  - Cognitive: $cognitive_dimension
+
+  b. Target Audience Analysis:
+  - Primary: $primary_audience
+  - Secondary: $secondary_audience
+  - Tertiary: $tertiary_audience
+
+  c. Current Narrative Landscape:
+  $current_narratives
+
+  2. MEANING
+  ----------
+  a. Information Effects Analysis:
+  - Desired Effects: $desired_effects
+  - Undesired Effects: $undesired_effects
+  - Second Order Effects: $second_order
+
+  b. Vulnerability Analysis:
+  - Technical: $technical_vulnerabilities
+  - Social: $social_vulnerabilities
+  - Cultural: $cultural_factors
+
+  c. Capability Assessment:
+  - Available Tools: $available_tools
+  - Constraints: $constraints
+  - Opportunities: $opportunities
+
+  3. ACTION
+  ---------
+  a. Lines of Effort:
+  - Electronic Warfare: $ew_actions
+  - Cyber Operations: $cyber_actions
+  - Military Deception: $mildec_actions
+  - PSYOPS: $psyops_actions
+  - Public Affairs: $pa_actions
+
+  b. Synchronization Requirements:
+  $synchronization
+
+  c. Resource Requirements:
+  $resources
+
+  4. PREDICTION
+  ------------
+  a. Expected Information Effects:
+  $expected_effects
+
+  b. Measures of Effectiveness:
+  $moe
+
+  c. Risk Assessment:
+  - Operational: $operational_risk
+  - Strategic: $strategic_risk
+  - Reputational: $reputational_risk
+
+  CONFIDENCE ASSESSMENT
+  --------------------
+  Intelligence Confidence: $intel_confidence
+  Effect Prediction Confidence: $effect_confidence
+  Overall Assessment: $overall_confidence
+
+  RECOMMENDATIONS
+  --------------
+  $recommendations
+
+variables:
+  - physical_dimension
+  - info_dimension
+  - cognitive_dimension
+  - primary_audience
+  - secondary_audience
+  - tertiary_audience
+  - current_narratives
+  - desired_effects
+  - undesired_effects
+  - second_order
+  - technical_vulnerabilities
+  - social_vulnerabilities
+  - cultural_factors
+  - available_tools
+  - constraints
+  - opportunities
+  - ew_actions
+  - cyber_actions
+  - mildec_actions
+  - psyops_actions
+  - pa_actions
+  - synchronization
+  - resources
+  - expected_effects
+  - moe
+  - operational_risk
+  - strategic_risk
+  - reputational_risk
+  - intel_confidence
+  - effect_confidence
+  - overall_confidence
+  - recommendations

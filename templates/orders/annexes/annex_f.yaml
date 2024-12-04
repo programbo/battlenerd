@@ -1,0 +1,179 @@
+template: |
+  ANNEX F (SUSTAINMENT) TO OPORD $operation_name
+  References: $references
+  Time Zone Used Throughout: $time_zone
+
+  1. SITUATION
+  ------------
+  a. Enemy Forces
+     (1) Enemy Capabilities Affecting CSS
+         $enemy_css_impact
+     (2) Enemy CSS Capabilities
+         $enemy_css_capabilities
+     (3) Enemy CSS Infrastructure
+         $enemy_css_infrastructure
+
+  b. Friendly Forces
+     (1) Higher HQ CSS Concept
+         $higher_css_concept
+     (2) Supporting CSS Units
+         $supporting_css
+     (3) Adjacent Unit CSS
+         $adjacent_css
+
+  c. Environment
+     (1) Terrain Effects on CSS
+         $terrain_effects
+     (2) Weather Effects on CSS
+         $weather_effects
+     (3) Civil Considerations
+         $civil_effects
+
+  2. MISSION
+  ----------
+  $sustainment_mission
+
+  3. EXECUTION
+  -----------
+  a. Concept of Sustainment
+     (1) General Concept
+         $sustainment_concept
+     (2) Priority of Support
+         $support_priority
+     (3) Risk Reduction
+         $risk_mitigation
+
+  b. Materiel and Services
+     (1) Supply
+         Class I (Subsistence): $class_1
+         Class II (General Supply): $class_2
+         Class III (POL): $class_3
+         Class IV (Construction): $class_4
+         Class V (Ammunition): $class_5
+         Class VI (Personal Demand): $class_6
+         Class VII (Major End Items): $class_7
+         Class VIII (Medical): $class_8
+         Class IX (Repair Parts): $class_9
+         Class X (Material for NonMilitary Programs): $class_10
+
+     (2) Transportation
+         (a) Main Supply Routes
+             $msr_plan
+         (b) Alternate Supply Routes
+             $asr_plan
+         (c) Beach Support Areas
+             $beach_support
+         (d) Maritime Logistics
+             $maritime_logistics
+
+     (3) Services
+         (a) Maintenance
+             $maintenance_plan
+         (b) Medical
+             $medical_support
+         (c) Field Services
+             $field_services
+
+  c. Support by Phase
+     Phase 1 (Shaping): $phase_1_support
+     Phase 2 (Decisive): $phase_2_support
+     Phase 3 (Exploitation): $phase_3_support
+     Phase 4 (Transition): $phase_4_support
+
+  4. LOGISTICS FACILITIES
+  ----------------------
+  a. Combat Service Support Areas
+     (1) Brigade Support Areas
+         $bsa_locations
+     (2) Forward Support Companies
+         $fsc_locations
+     (3) Maritime Support Areas
+         $maritime_support_areas
+
+  b. Support Installations
+     (1) Supply Points
+         $supply_points
+     (2) Maintenance Collection Points
+         $maintenance_points
+     (3) Medical Treatment Facilities
+         $mtf_locations
+     (4) Mortuary Affairs
+         $mortuary_affairs
+
+  5. COMMAND AND SIGNAL
+  --------------------
+  a. Command
+     (1) CSS Priorities
+         $css_priorities
+     (2) Support Relationships
+         $support_relationships
+     (3) CSS Control Measures
+         $css_control
+
+  b. Signal
+     (1) CSS Communications
+         $css_comms
+     (2) Logistics Information Systems
+         $log_systems
+
+  APPENDICES:
+  -----------
+  1. Supply and Field Services
+  2. Transportation
+  3. Health Service Support
+  4. Personnel Services Support
+  5. Maritime Logistics Support
+  6. Host Nation Support
+  7. Mortuary Affairs
+  8. Sustainment Overlay
+
+variables:
+  - operation_name
+  - references
+  - time_zone
+  - enemy_css_impact
+  - enemy_css_capabilities
+  - enemy_css_infrastructure
+  - higher_css_concept
+  - supporting_css
+  - adjacent_css
+  - terrain_effects
+  - weather_effects
+  - civil_effects
+  - sustainment_mission
+  - sustainment_concept
+  - support_priority
+  - risk_mitigation
+  - class_1
+  - class_2
+  - class_3
+  - class_4
+  - class_5
+  - class_6
+  - class_7
+  - class_8
+  - class_9
+  - class_10
+  - msr_plan
+  - asr_plan
+  - beach_support
+  - maritime_logistics
+  - maintenance_plan
+  - medical_support
+  - field_services
+  - phase_1_support
+  - phase_2_support
+  - phase_3_support
+  - phase_4_support
+  - bsa_locations
+  - fsc_locations
+  - maritime_support_areas
+  - supply_points
+  - maintenance_points
+  - mtf_locations
+  - mortuary_affairs
+  - css_priorities
+  - support_relationships
+  - css_control
+  - css_comms
+  - log_systems

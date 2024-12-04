@@ -1,0 +1,68 @@
+template: |
+  STRATEGIC IMAP ANALYSIS
+  ======================
+
+  1. INFORMATION
+  -------------
+  $information_summary
+
+  2. MEANING
+  ----------
+  a. Strategic Context:
+  $strategic_context
+
+  b. Known Strategic Factors:
+  $known_facts
+
+  c. Strategic Assumptions:
+  $assumptions
+
+  d. Strategic Intelligence Gaps:
+  $gaps
+
+  3. ACTION
+  ---------
+  a. Strategic Actions Required:
+  $required_actions
+
+  b. Strategic Priority:
+  $priority
+
+  c. Resource Implications:
+  $resources
+
+  4. PREDICTION
+  ------------
+  a. Long-term Strategic Outcomes:
+  $likely_outcome
+
+  b. Alternative Strategic Scenarios:
+  $other_possibilities
+
+  c. Strategic Warning Indicators:
+  $warning_signs
+
+  CONFIDENCE ASSESSMENT
+  --------------------
+  Information Reliability: $info_reliability
+  Strategic Analysis Confidence: $analytical_confidence
+
+  STRATEGIC RECOMMENDATIONS
+  ------------------------
+  $recommendations
+
+variables:
+  - information_summary
+  - strategic_context
+  - known_facts
+  - assumptions
+  - gaps
+  - required_actions
+  - priority
+  - resources
+  - likely_outcome
+  - other_possibilities
+  - warning_signs
+  - info_reliability
+  - analytical_confidence
+  - recommendations

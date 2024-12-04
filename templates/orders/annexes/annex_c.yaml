@@ -1,0 +1,133 @@
+template: |
+  ANNEX C (OPERATIONS) TO OPORD $operation_name
+  References: $references
+  Time Zone Used Throughout: $time_zone
+
+  1. SITUATION
+  ------------
+  a. Operational Environment
+     (1) Terrain
+         $terrain_analysis
+     (2) Weather
+         $weather_effects
+     (3) Civil Considerations
+         $civil_considerations
+
+  b. Enemy Forces
+     (1) Enemy Courses of Action
+         $enemy_coa
+     (2) Enemy End State
+         $enemy_end_state
+
+  c. Friendly Forces
+     (1) Higher Headquarters
+         $higher_hq
+     (2) Adjacent Units
+         $adjacent_units
+     (3) Supporting Units
+         $supporting_units
+
+  2. MISSION
+  ----------
+  $operations_mission
+
+  3. EXECUTION
+  -----------
+  a. Concept of Operations
+     (1) Maneuver
+         $maneuver_concept
+     (2) Fires
+         $fires_concept
+     (3) Intelligence
+         $intel_concept
+     (4) Protection
+         $protection_concept
+
+  b. Scheme of Maneuver
+     Phase 1 (Shaping): $phase_1_scheme
+     Phase 2 (Decisive): $phase_2_scheme
+     Phase 3 (Exploitation): $phase_3_scheme
+     Phase 4 (Transition): $phase_4_scheme
+
+  c. Tasks to Maneuver Units
+     $maneuver_tasks
+
+  d. Tasks to Combat Support Units
+     $support_tasks
+
+  e. Coordinating Instructions
+     (1) Timelines
+         $timelines
+     (2) Control Measures
+         $control_measures
+     (3) Rules of Engagement
+         $roe
+     (4) Risk Reduction
+         $risk_reduction
+
+  4. SUSTAINMENT
+  -------------
+  a. Concept of Support
+     $support_concept
+
+  b. Materiel and Services
+     $materiel_services
+
+  5. COMMAND AND CONTROL
+  ---------------------
+  a. Command
+     (1) Location of Key Leaders
+         $leader_locations
+     (2) Succession of Command
+         $command_succession
+
+  b. Control
+     (1) Control Measures
+         $control_measures
+     (2) Reports
+         $required_reports
+
+  APPENDICES:
+  -----------
+  1. Design Concept
+  2. Decision Support Matrix
+  3. Scheme of Maneuver Overlay
+  4. Operations Overlay
+  5. Movement Control
+  6. Army Aviation Operations
+  7. Rules of Engagement
+  8. Risk Management
+
+variables:
+  - operation_name
+  - references
+  - time_zone
+  - terrain_analysis
+  - weather_effects
+  - civil_considerations
+  - enemy_coa
+  - enemy_end_state
+  - higher_hq
+  - adjacent_units
+  - supporting_units
+  - operations_mission
+  - maneuver_concept
+  - fires_concept
+  - intel_concept
+  - protection_concept
+  - phase_1_scheme
+  - phase_2_scheme
+  - phase_3_scheme
+  - phase_4_scheme
+  - maneuver_tasks
+  - support_tasks
+  - timelines
+  - control_measures
+  - roe
+  - risk_reduction
+  - support_concept
+  - materiel_services
+  - leader_locations
+  - command_succession
+  - control_measures
+  - required_reports

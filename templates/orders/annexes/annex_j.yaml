@@ -1,0 +1,218 @@
+template: |
+  ANNEX J (CIVIL AFFAIRS) TO OPORD $operation_name
+  References: $references
+  Time Zone Used Throughout: $time_zone
+
+  1. SITUATION
+  ------------
+  a. Civil Environment
+     (1) Areas
+         (a) Political Boundaries
+             $political_boundaries
+         (b) Ethnic Distribution
+             $ethnic_distribution
+         (c) Economic Zones
+             $economic_zones
+
+     (2) Structures
+         (a) Civil Government
+             $civil_government
+         (b) Critical Infrastructure
+             $critical_infrastructure
+         (c) Cultural Sites
+             $cultural_sites
+
+     (3) Capabilities
+         (a) Public Services
+             $public_services
+         (b) Emergency Services
+             $emergency_services
+         (c) Essential Services
+             $essential_services
+
+     (4) Organizations
+         (a) International Organizations
+             $international_orgs
+         (b) NGOs
+             $ngos
+         (c) Local Organizations
+             $local_orgs
+
+     (5) People
+         (a) Population Demographics
+             $demographics
+         (b) Displaced Persons
+             $displaced_persons
+         (c) Key Leaders
+             $key_leaders
+
+  b. Enemy Forces
+     (1) Effects on Civil Population
+         $enemy_civil_effects
+     (2) Propaganda/Information Operations
+         $enemy_propaganda
+     (3) Civil Control Measures
+         $enemy_control_measures
+
+  c. Friendly Forces
+     (1) Host Nation Support
+         $host_nation_support
+     (2) Coalition Civil Affairs
+         $coalition_ca
+     (3) NGO Coordination
+         $ngo_coordination
+
+  2. MISSION
+  ----------
+  $civil_affairs_mission
+
+  3. EXECUTION
+  -----------
+  a. Concept of Civil Affairs Operations
+     (1) Overall Concept
+         $cao_concept
+     (2) Priority of Effort
+         $cao_priority
+     (3) End State
+         $cao_end_state
+
+  b. Tasks by Phase
+     Phase 1 (Shaping)
+     - Population Control: $phase_1_population
+     - Essential Services: $phase_1_services
+     - Governance Support: $phase_1_governance
+
+     Phase 2 (Decisive)
+     - Population Control: $phase_2_population
+     - Essential Services: $phase_2_services
+     - Governance Support: $phase_2_governance
+
+     Phase 3 (Exploitation)
+     - Population Control: $phase_3_population
+     - Essential Services: $phase_3_services
+     - Governance Support: $phase_3_governance
+
+     Phase 4 (Transition)
+     - Population Control: $phase_4_population
+     - Essential Services: $phase_4_services
+     - Governance Support: $phase_4_governance
+
+  c. Humanitarian Assistance
+     (1) Emergency Services
+         $emergency_assistance
+     (2) Essential Services
+         $essential_assistance
+     (3) Public Health
+         $public_health
+
+  d. Civil Information Management
+     (1) Information Collection
+         $civil_info_collection
+     (2) Information Sharing
+         $civil_info_sharing
+     (3) Assessment Process
+         $civil_assessment
+
+  4. SERVICE SUPPORT
+  -----------------
+  a. Logistics
+     (1) Humanitarian Assistance
+         $ha_logistics
+     (2) Transportation Support
+         $civil_transportation
+     (3) Medical Support
+         $civil_medical
+
+  b. Personnel
+     (1) Civil Affairs Teams
+         $ca_teams
+     (2) Interpreters
+         $interpreters
+     (3) Subject Matter Experts
+         $civil_sme
+
+  5. COMMAND AND SIGNAL
+  --------------------
+  a. Command
+     (1) Civil-Military Operations Center
+         $cmoc_operations
+     (2) Liaison Requirements
+         $civil_liaison
+     (3) Coordination Requirements
+         $civil_coordination
+
+  b. Signal
+     (1) Civil Affairs Communications
+         $ca_communications
+     (2) Information Sharing Networks
+         $info_sharing_networks
+
+  APPENDICES:
+  -----------
+  1. Civil Affairs Area Assessment
+  2. Protected Targets
+  3. Humanitarian Assistance
+  4. Civil Information Management
+  5. Dislocated Civilian Operations
+  6. Foreign Humanitarian Assistance
+  7. Nation Assistance
+  8. Support to Civil Administration
+
+variables:
+  - operation_name
+  - references
+  - time_zone
+  - political_boundaries
+  - ethnic_distribution
+  - economic_zones
+  - civil_government
+  - critical_infrastructure
+  - cultural_sites
+  - public_services
+  - emergency_services
+  - essential_services
+  - international_orgs
+  - ngos
+  - local_orgs
+  - demographics
+  - displaced_persons
+  - key_leaders
+  - enemy_civil_effects
+  - enemy_propaganda
+  - enemy_control_measures
+  - host_nation_support
+  - coalition_ca
+  - ngo_coordination
+  - civil_affairs_mission
+  - cao_concept
+  - cao_priority
+  - cao_end_state
+  - phase_1_population
+  - phase_1_services
+  - phase_1_governance
+  - phase_2_population
+  - phase_2_services
+  - phase_2_governance
+  - phase_3_population
+  - phase_3_services
+  - phase_3_governance
+  - phase_4_population
+  - phase_4_services
+  - phase_4_governance
+  - emergency_assistance
+  - essential_assistance
+  - public_health
+  - civil_info_collection
+  - civil_info_sharing
+  - civil_assessment
+  - ha_logistics
+  - civil_transportation
+  - civil_medical
+  - ca_teams
+  - interpreters
+  - civil_sme
+  - cmoc_operations
+  - civil_liaison
+  - civil_coordination
+  - ca_communications
+  - info_sharing_networks

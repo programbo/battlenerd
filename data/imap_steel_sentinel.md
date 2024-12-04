@@ -213,7 +213,7 @@ beyond current holdings, potentially including:
 - - Maritime-air integration
 - - Amphibious capability demonstration
 - - Information operations support
--
+
 - Infrastructure Focus:
 - - Priority targeting of:
 - - Port facilities

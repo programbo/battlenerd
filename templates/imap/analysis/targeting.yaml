@@ -1,0 +1,107 @@
+template: |
+  TARGETING IMAP ANALYSIS
+  ======================
+
+  1. INFORMATION
+  -------------
+  a. Target Details:
+  - Designation: $target_designation
+  - Category: $target_category
+  - Location: $target_location
+  - Pattern of Life: $pattern_of_life
+
+  b. Intelligence Sources:
+  $intelligence_sources
+  Collection Plan: $collection_plan
+
+  2. MEANING
+  ----------
+  a. Target Value Assessment:
+  - Military Significance: $military_value
+  - Operational Impact: $operational_impact
+  - Strategic Value: $strategic_value
+
+  b. Target System Analysis:
+  - Critical Elements: $critical_elements
+  - Dependencies: $dependencies
+  - Vulnerabilities: $vulnerabilities
+
+  c. Collateral Damage Estimate:
+  - Projected Effects: $collateral_effects
+  - Sensitive Sites: $sensitive_sites
+  - Population Density: $population_density
+
+  3. ACTION
+  ---------
+  a. Targeting Options:
+  - Kinetic: $kinetic_options
+  - Non-kinetic: $nonkinetic_options
+  - Information Operations: $info_ops
+
+  b. Asset Requirements:
+  $asset_requirements
+
+  c. Support Requirements:
+  - ISR: $isr_requirements
+  - Combat Support: $combat_support
+  - Battle Damage Assessment: $bda_requirements
+
+  4. PREDICTION
+  ------------
+  a. Expected Effects:
+  - Primary: $primary_effects
+  - Secondary: $secondary_effects
+  - Tertiary: $tertiary_effects
+
+  b. Risk Assessment:
+  - Mission Success: $mission_risk
+  - Force Protection: $force_protection_risk
+  - Collateral: $collateral_risk
+
+  c. Warning Indicators:
+  $warning_indicators
+
+  CONFIDENCE ASSESSMENT
+  --------------------
+  Target Intelligence Confidence: $target_confidence
+  Effects Prediction Confidence: $effects_confidence
+  Overall Assessment Rating: $overall_rating
+
+  RECOMMENDATIONS
+  --------------
+  $recommendations
+
+variables:
+  - target_designation
+  - target_category
+  - target_location
+  - pattern_of_life
+  - intelligence_sources
+  - collection_plan
+  - military_value
+  - operational_impact
+  - strategic_value
+  - critical_elements
+  - dependencies
+  - vulnerabilities
+  - collateral_effects
+  - sensitive_sites
+  - population_density
+  - kinetic_options
+  - nonkinetic_options
+  - info_ops
+  - asset_requirements
+  - isr_requirements
+  - combat_support
+  - bda_requirements
+  - primary_effects
+  - secondary_effects
+  - tertiary_effects
+  - mission_risk
+  - force_protection_risk
+  - collateral_risk
+  - warning_indicators
+  - target_confidence
+  - effects_confidence
+  - overall_rating
+  - recommendations

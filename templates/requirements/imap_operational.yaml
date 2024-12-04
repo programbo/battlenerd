@@ -1,0 +1,33 @@
+information_summary:
+  critical: true
+  reason: "Core IMAP component - provides situation understanding"
+  priority: 1
+  required_context:
+    - situation
+    - background
+    - current_state
+  validation_rules:
+    - min_length: 100
+    - must_include: ["who", "what", "where", "when"]
+
+known_facts:
+  critical: true
+  reason: "Required for analysis validity"
+  priority: 1
+  required_context:
+    - confirmed_intelligence
+    - verified_reports
+  validation_rules:
+    - min_items: 3
+    - must_be_verifiable: true
+
+assumptions:
+  critical: false
+  reason: "Needed for complete analysis"
+  priority: 2
+  required_context:
+    - intelligence_gaps
+    - historical_patterns
+  validation_rules:
+    - must_be_labeled_assumption: true
+    - must_include_confidence_level: true

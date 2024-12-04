@@ -1,0 +1,68 @@
+information_summary:
+  critical: true
+  reason: "Core IMAP component - strategic level understanding"
+  priority: 1
+  required_context:
+    - strategic_situation
+    - geopolitical_background
+    - historical_context
+    - regional_dynamics
+  validation_rules:
+    - min_length: 200
+    - must_include: ["who", "what", "where", "when", "why"]
+    - must_include_strategic_implications: true
+
+known_facts:
+  critical: true
+  reason: "Required for strategic analysis"
+  priority: 1
+  required_context:
+    - confirmed_intelligence
+    - diplomatic_reporting
+    - open_source_intelligence
+    - economic_indicators
+  validation_rules:
+    - min_items: 5
+    - must_be_verifiable: true
+    - must_include_multiple_sources: true
+
+assumptions:
+  critical: true
+  reason: "Critical for strategic planning"
+  priority: 1
+  required_context:
+    - intelligence_gaps
+    - historical_patterns
+    - regional_trends
+    - political_factors
+  validation_rules:
+    - must_be_labeled_assumption: true
+    - must_include_confidence_level: true
+    - must_include_impact_assessment: true
+
+strategic_implications:
+  critical: true
+  reason: "Required for strategic decision making"
+  priority: 1
+  required_context:
+    - regional_impact
+    - alliance_considerations
+    - economic_effects
+    - political_consequences
+  validation_rules:
+    - must_address_all_instruments_of_power: true
+    - must_include_long_term_effects: true
+
+recommendations:
+  critical: true
+  reason: "Required for strategic planning"
+  priority: 1
+  required_context:
+    - strategic_objectives
+    - available_resources
+    - constraints
+    - risks
+  validation_rules:
+    - must_align_with_strategic_goals: true
+    - must_include_resource_implications: true
+    - must_address_risks: true

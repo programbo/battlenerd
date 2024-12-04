@@ -3,3 +3,4 @@ sentence-transformers
 fastapi
 uvicorn
 pydantic
+llama-cpp-python

@@ -40,6 +40,7 @@ venv.bak/
 
 # Project specific
 chroma_db/
+cache/
 *.db
 *.sqlite
 *.sqlite3
@@ -53,3 +54,4 @@ Thumbs.db
 .coverage
 htmlcov/
 .pytest_cache/
+models/*.gguf

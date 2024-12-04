@@ -1,0 +1,33 @@
+template: |
+  Tactical Analysis: Squad Reconnaissance Patrol
+
+  Mission Type: Reconnaissance
+  Formation: $formation
+
+  Key Phases:
+  1. Preparation
+  $preparation
+
+  2. Movement
+  $movement
+
+  3. Actions on Contact
+  $contact_actions
+
+  4. Reporting
+  $reporting
+
+  Special Considerations:
+  $considerations
+
+  Equipment Requirements:
+  $equipment
+
+variables:
+  - formation
+  - preparation
+  - movement
+  - contact_actions
+  - reporting
+  - considerations
+  - equipment

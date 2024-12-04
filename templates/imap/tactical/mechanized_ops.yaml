@@ -1,0 +1,199 @@
+template: |
+  TACTICAL IMAP: MECHANIZED OPERATIONS
+  ==================================
+
+  1. INFORMATION
+  -------------
+  a. Terrain Analysis:
+  - Mobility Corridors: $mobility_corridors
+  - Obstacles: $terrain_obstacles
+  - Key Terrain: $key_terrain
+  - Urban Features: $urban_features
+
+  b. Enemy Assessment:
+  - Anti-Armor Capabilities: $anti_armor
+  - Defensive Positions: $defensive_positions
+  - AT Weapons Systems: $at_weapons
+  - Support Elements: $enemy_support
+
+  c. Friendly Forces:
+  - Vehicle Assets: $vehicle_assets
+  - Dismounted Elements: $dismounted_elements
+  - Support Weapons: $support_weapons
+  - Adjacent Units: $adjacent_units
+
+  2. MEANING
+  ----------
+  a. Tactical Analysis:
+  - Engagement Areas: $engagement_areas
+  - Kill Zones: $kill_zones
+  - Cover/Concealment: $cover_concealment
+  - Fields of Fire: $fields_of_fire
+
+  b. Vehicle Considerations:
+  - Mounted Movement: $mounted_movement
+  - Dismount Points: $dismount_points
+  - Vehicle Hide Positions: $hide_positions
+  - Recovery Points: $recovery_points
+
+  c. Combat Support:
+  - Fire Support: $fire_support
+  - Engineer Support: $engineer_support
+  - CASEVAC Plan: $casevac_plan
+  - Resupply Points: $resupply_points
+
+  3. ACTION
+  ---------
+  a. Movement Plan:
+  - Formation Selection: $formations
+  - Speed Control: $speed_control
+  - Spacing Requirements: $spacing
+  - Rally Points: $rally_points
+
+  b. Battle Drills:
+  - Contact Front: $contact_front
+  - Contact Flank: $contact_flank
+  - Vehicle Casualty: $vehicle_casualty
+  - Dismount Drill: $dismount_drill
+
+  c. Fire Control Orders:
+  - Target Indication: $target_indication
+  - Fire Distribution: $fire_distribution
+  - Fire Control: $fire_control
+  - Ammunition Control: $ammo_control
+
+  4. PREDICTION
+  ------------
+  a. Most Likely Enemy Actions:
+  - AT Ambush: $at_ambush
+  - Mine/IED Threat: $mine_threat
+  - Infantry Attack: $infantry_attack
+  - Artillery Fire: $artillery_threat
+
+  b. Most Dangerous Enemy Actions:
+  - Tank Attack: $tank_attack
+  - Air Attack: $air_attack
+  - ATGM Teams: $atgm_teams
+  - Urban Ambush: $urban_ambush
+
+  c. Decision Points:
+  - Dismount Criteria: $dismount_criteria
+  - Alternate Routes: $alternate_routes
+  - Withdrawal Points: $withdrawal_points
+  - Contingency Plans: $contingency_plans
+
+  IMMEDIATE ACTION DRILLS
+  ----------------------
+  1. Vehicle Actions:
+  - Immediate Action: $vehicle_immediate
+  - Break Contact: $break_contact
+  - Vehicle Recovery: $vehicle_recovery
+
+  2. Crew Drills:
+  - Fire/Smoke: $fire_smoke_drill
+  - NBC: $nbc_drill
+  - Bail Out: $bail_out_drill
+
+  3. Section Drills:
+  - Counter Ambush: $counter_ambush
+  - Anti-Air: $anti_air_drill
+  - Obstacle Breach: $obstacle_breach
+
+  BATTLE PROCEDURE
+  ---------------
+  1. Orders:
+  - Warning Order: $warning_order
+  - Combat Orders: $combat_orders
+  - Confirmatory Orders: $confirmatory_orders
+
+  2. Preparation:
+  - Vehicle Checks: $vehicle_checks
+  - Weapon Tests: $weapon_tests
+  - Communications Check: $comms_check
+
+  3. Rehearsals:
+  - Mounted Drills: $mounted_rehearsal
+  - Dismounted Drills: $dismounted_rehearsal
+  - Actions On: $actions_on
+
+  CONFIDENCE ASSESSMENT
+  --------------------
+  Intelligence Reliability: $intel_reliability
+  Tactical Assessment: $tactical_confidence
+  Overall Confidence: $overall_confidence
+
+  RECOMMENDATIONS
+  --------------
+  $recommendations
+
+variables:
+  - mobility_corridors
+  - terrain_obstacles
+  - key_terrain
+  - urban_features
+  - anti_armor
+  - defensive_positions
+  - at_weapons
+  - enemy_support
+  - vehicle_assets
+  - dismounted_elements
+  - support_weapons
+  - adjacent_units
+  - engagement_areas
+  - kill_zones
+  - cover_concealment
+  - fields_of_fire
+  - mounted_movement
+  - dismount_points
+  - hide_positions
+  - recovery_points
+  - fire_support
+  - engineer_support
+  - casevac_plan
+  - resupply_points
+  - formations
+  - speed_control
+  - spacing
+  - rally_points
+  - contact_front
+  - contact_flank
+  - vehicle_casualty
+  - dismount_drill
+  - target_indication
+  - fire_distribution
+  - fire_control
+  - ammo_control
+  - at_ambush
+  - mine_threat
+  - infantry_attack
+  - artillery_threat
+  - tank_attack
+  - air_attack
+  - atgm_teams
+  - urban_ambush
+  - dismount_criteria
+  - alternate_routes
+  - withdrawal_points
+  - contingency_plans
+  - vehicle_immediate
+  - break_contact
+  - vehicle_recovery
+  - fire_smoke_drill
+  - nbc_drill
+  - bail_out_drill
+  - counter_ambush
+  - anti_air_drill
+  - obstacle_breach
+  - warning_order
+  - combat_orders
+  - confirmatory_orders
+  - vehicle_checks
+  - weapon_tests
+  - comms_check
+  - mounted_rehearsal
+  - dismounted_rehearsal
+  - actions_on
+  - intel_reliability
+  - tactical_confidence
+  - overall_confidence
+  - recommendations

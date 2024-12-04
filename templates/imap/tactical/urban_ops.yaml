@@ -1,0 +1,139 @@
+template: |
+  TACTICAL IMAP: URBAN OPERATIONS
+  ==============================
+
+  1. INFORMATION
+  -------------
+  a. Urban Environment:
+  - Area Description: $area_description
+  - Building Types: $building_types
+  - Infrastructure Status: $infrastructure
+  - Population Status: $population_status
+
+  b. Enemy Assessment:
+  - Strength: $enemy_strength
+  - Disposition: $enemy_disposition
+  - Fortifications: $fortifications
+  - Support Elements: $enemy_support
+
+  c. Friendly Forces:
+  - Available Elements: $friendly_elements
+  - Support Assets: $support_assets
+  - Adjacent Units: $adjacent_units
+
+  2. MEANING
+  ----------
+  a. Key Terrain Analysis:
+  - Critical Buildings: $critical_buildings
+  - Chokepoints: $chokepoints
+  - Fields of Fire: $fields_of_fire
+  - Cover/Concealment: $cover_concealment
+
+  b. Civilian Considerations:
+  - Population Density: $population_density
+  - Essential Services: $essential_services
+  - Movement Patterns: $civilian_movement
+  - Key Leaders: $key_leaders
+
+  c. Tactical Challenges:
+  - Obstacles: $obstacles
+  - Communications: $comms_challenges
+  - Logistics: $logistics_challenges
+  - Medical Support: $medical_considerations
+
+  3. ACTION
+  ---------
+  a. Immediate Actions:
+  - Isolation Requirements: $isolation_actions
+  - Entry Points: $entry_points
+  - Building Clearance: $clearance_methods
+  - Support Positions: $support_positions
+
+  b. Control Measures:
+  - Phase Lines: $phase_lines
+  - Boundaries: $boundaries
+  - Fire Control: $fire_control
+  - Link-up Points: $linkup_points
+
+  c. Support Requirements:
+  - Fire Support: $fire_support
+  - Engineer Support: $engineer_support
+  - Medical Support: $medical_support
+  - Logistics: $logistics_support
+
+  4. PREDICTION
+  ------------
+  a. Most Likely Enemy Actions:
+  - Defense Plan: $enemy_defense
+  - Counterattack Routes: $counterattack_routes
+  - Withdrawal Routes: $withdrawal_routes
+
+  b. Most Dangerous Enemy Actions:
+  - Booby Traps: $booby_traps
+  - Strongpoints: $strongpoints
+  - Civilian Use: $civilian_use
+
+  c. Decision Points:
+  - Triggers: $decision_triggers
+  - Branches: $tactical_branches
+  - Sequels: $tactical_sequels
+
+  CONFIDENCE ASSESSMENT
+  --------------------
+  Intelligence Reliability: $intel_reliability
+  Tactical Assessment: $tactical_confidence
+  Overall Confidence: $overall_confidence
+
+  RECOMMENDATIONS
+  --------------
+  $recommendations
+
+variables:
+  - area_description
+  - building_types
+  - infrastructure
+  - population_status
+  - enemy_strength
+  - enemy_disposition
+  - fortifications
+  - enemy_support
+  - friendly_elements
+  - support_assets
+  - adjacent_units
+  - critical_buildings
+  - chokepoints
+  - fields_of_fire
+  - cover_concealment
+  - population_density
+  - essential_services
+  - civilian_movement
+  - key_leaders
+  - obstacles
+  - comms_challenges
+  - logistics_challenges
+  - medical_considerations
+  - isolation_actions
+  - entry_points
+  - clearance_methods
+  - support_positions
+  - phase_lines
+  - boundaries
+  - fire_control
+  - linkup_points
+  - fire_support
+  - engineer_support
+  - medical_support
+  - logistics_support
+  - enemy_defense
+  - counterattack_routes
+  - withdrawal_routes
+  - booby_traps
+  - strongpoints
+  - civilian_use
+  - decision_triggers
+  - tactical_branches
+  - tactical_sequels
+  - intel_reliability
+  - tactical_confidence
+  - overall_confidence
+  - recommendations

@@ -1,0 +1,130 @@
+template: |
+  APPENDIX 3 (SIGINT COLLECTION PLAN) TO ANNEX B TO OPORD $operation_name
+  References: $references
+  Time Zone Used Throughout: $time_zone
+
+  1. SITUATION
+  ------------
+  a. Enemy Electronic Order of Battle
+     (1) Command and Control Systems
+         $enemy_c2_systems
+     (2) Air Defense Networks
+         $enemy_ad_networks
+     (3) Naval Communications
+         $enemy_naval_comms
+     (4) Ground Force Communications
+         $enemy_ground_comms
+
+  b. Enemy Electronic Signatures
+     (1) Known Frequencies
+         $known_frequencies
+     (2) Communication Patterns
+         $comm_patterns
+     (3) Electronic Systems
+         $electronic_systems
+
+  2. MISSION
+  ----------
+  $sigint_mission
+
+  3. EXECUTION
+  -----------
+  a. Concept of Collection
+     (1) Priority Intelligence Requirements
+         $sigint_pir
+     (2) Collection Priorities
+         $collection_priorities
+     (3) Named Areas of Interest
+         $sigint_nai
+
+  b. Collection Tasks
+     (1) Phase 1 (Shaping)
+         (a) Maritime Collection
+             $phase_1_maritime
+         (b) Air Defense Collection
+             $phase_1_air_defense
+         (c) Ground Force Collection
+             $phase_1_ground
+
+     (2) Phase 2 (Decisive)
+         (a) Maritime Collection
+             $phase_2_maritime
+         (b) Air Defense Collection
+             $phase_2_air_defense
+         (c) Ground Force Collection
+             $phase_2_ground
+
+     (3) Phase 3 (Exploitation)
+         (a) Maritime Collection
+             $phase_3_maritime
+         (b) Air Defense Collection
+             $phase_3_air_defense
+         (c) Ground Force Collection
+             $phase_3_ground
+
+  4. SERVICE SUPPORT
+  -----------------
+  a. Collection Assets
+     (1) Strategic Systems
+         $strategic_systems
+     (2) Operational Systems
+         $operational_systems
+     (3) Tactical Systems
+         $tactical_systems
+
+  b. Processing Systems
+     (1) Analysis Capabilities
+         $analysis_capabilities
+     (2) Reporting Systems
+         $reporting_systems
+     (3) Dissemination Methods
+         $dissemination_methods
+
+  5. COMMAND AND SIGNAL
+  --------------------
+  a. Command
+     (1) Collection Management
+         $collection_management
+     (2) Tasking Authority
+         $tasking_authority
+
+  b. Signal
+     (1) Reporting Channels
+         $reporting_channels
+     (2) Time Requirements
+         $time_requirements
+
+variables:
+  - operation_name
+  - references
+  - time_zone
+  - enemy_c2_systems
+  - enemy_ad_networks
+  - enemy_naval_comms
+  - enemy_ground_comms
+  - known_frequencies
+  - comm_patterns
+  - electronic_systems
+  - sigint_mission
+  - sigint_pir
+  - collection_priorities
+  - sigint_nai
+  - phase_1_maritime
+  - phase_1_air_defense
+  - phase_1_ground
+  - phase_2_maritime
+  - phase_2_air_defense
+  - phase_2_ground
+  - phase_3_maritime
+  - phase_3_air_defense
+  - phase_3_ground
+  - strategic_systems
+  - operational_systems
+  - tactical_systems
+  - analysis_capabilities
+  - reporting_systems
+  - dissemination_methods
+  - collection_management
+  - tasking_authority
+  - reporting_channels
+  - time_requirements

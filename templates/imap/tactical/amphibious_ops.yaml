@@ -1,0 +1,119 @@
+template: |
+  TACTICAL IMAP: AMPHIBIOUS OPERATIONS
+  ==================================
+
+  1. INFORMATION
+  -------------
+  a. Landing Environment:
+  - Beach Conditions: $beach_conditions
+  - Surf Zone: $surf_zone
+  - Tidal Information: $tidal_info
+  - Coastal Features: $coastal_features
+
+  b. Enemy Situation:
+  - Beach Defenses: $beach_defenses
+  - Depth Defenses: $depth_defenses
+  - Reaction Forces: $reaction_forces
+  - Fire Support: $enemy_fire_support
+
+  c. Friendly Forces:
+  - Landing Force: $landing_force
+  - Naval Support: $naval_support
+  - Air Support: $air_support
+  - Fire Support: $friendly_fire_support
+
+  2. MEANING
+  ----------
+  a. Landing Zone Analysis:
+  - Approach Lanes: $approach_lanes
+  - Landing Points: $landing_points
+  - Exit Routes: $beach_exits
+  - Assembly Areas: $assembly_areas
+
+  b. Critical Factors:
+  - H-Hour Considerations: $h_hour_factors
+  - Sea State Impact: $sea_state_impact
+  - Weather Effects: $weather_effects
+  - Night Operations: $night_ops_impact
+
+  c. Tactical Challenges:
+  - Beach Obstacles: $beach_obstacles
+  - Fire Support Coordination: $fire_coordination
+  - Ship-to-Shore Movement: $ship_to_shore
+  - C2 Challenges: $command_control
+
+  3. ACTION
+  ---------
+  a. Landing Plan:
+  - Wave Organization: $wave_organization
+  - Beach Organization: $beach_organization
+  - Control Measures: $control_measures
+  - Communications: $communications_plan
+
+  b. Fire Support Plan:
+  - Naval Gunfire: $naval_gunfire
+  - Close Air Support: $close_air_support
+  - Artillery Support: $artillery_support
+  - NSFS Coordination: $nsfs_coordination
+
+  c. Support Requirements:
+  - Beach Support Area: $beach_support
+  - Medical Evacuation: $medical_evac
+  - Logistics Over Shore: $logistics_plan
+  - Engineering Support: $engineer_support
+
+  4. PREDICTION
+  ------------
+  a. Most Likely Enemy Actions:
+  - Initial Response: $initial_response
+  - Counterattack Plans: $counterattack_plans
+  - Fire Support Plans: $enemy_fire_plans
+  - Reinforcement: $reinforcement_plans
+
+  b. Most Dangerous Enemy Actions:
+  - Beach Denial: $beach_denial
+  - Mobile Reserves: $mobile_reserves
+  - Chemical Defense: $chemical_defense
+  - Critical Infrastructure: $infrastructure_denial
+
+  c. Decision Points:
+  - Wave Commitment: $wave_commitment
+  - Alternate Beaches: $alternate_beaches
+  - Withdrawal Criteria: $withdrawal_criteria
+  - Branch Plans: $branch_plans
+
+  IMMEDIATE ACTION DRILLS
+  ----------------------
+  - Craft Breakdown: $craft_breakdown_drill
+  - Beach Obstacles: $obstacle_drill
+  - Casualty Response: $casualty_drill
+  - Enemy Contact: $contact_drill
+
+  BATTLE PROCEDURE
+  ---------------
+  1. Preparation Phase:
+  - Rehearsals: $rehearsal_requirements
+  - Equipment Checks: $equipment_checks
+  - Loading Plan: $loading_plan
+
+  2. Movement Phase:
+  - Line of Departure: $departure_procedures
+  - Wave Formation: $wave_formation
+  - Beach Approach: $approach_procedures
+
+  3. Assault Phase:
+  - Beach Organization: $beach_procedures
+  - Rally Points: $rally_procedures
+  - Subsequent Bounds: $bound_procedures
+
+  CONFIDENCE ASSESSMENT
+  --------------------
+  Intelligence Reliability: $intel_reliability
+  Environmental Assessment: $environment_confidence
+  Overall Confidence: $overall_confidence
+
+  RECOMMENDATIONS
+  --------------
+  $recommendations
+
+variables: [List continues with all variables from template...]

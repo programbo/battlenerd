@@ -1,0 +1,166 @@
+template: |
+  APPENDIX 4 (PORT STUDIES) TO ANNEX G TO OPORD $operation_name
+  References: $references
+  Time Zone Used Throughout: $time_zone
+
+  1. PURPOSE
+  ----------
+  $purpose
+
+  2. PORT CHARACTERISTICS
+  ----------------------
+  a. Physical Infrastructure
+     (1) Berths and Piers
+         (a) Locations
+             $berth_locations
+         (b) Dimensions
+             $berth_dimensions
+         (c) Depth Alongside
+             $berth_depths
+         (d) Load Bearing Capacity
+             $berth_capacity
+
+     (2) Storage Areas
+         (a) Open Storage
+             $open_storage
+         (b) Covered Storage
+             $covered_storage
+         (c) Special Storage
+             $special_storage
+
+     (3) Port Equipment
+         (a) Cranes
+             $crane_details
+         (b) Material Handling Equipment
+             $mhe_details
+         (c) Roll-on/Roll-off Facilities
+             $roro_facilities
+
+  3. HYDROGRAPHIC DATA
+  -------------------
+  a. Channel Characteristics
+     (1) Approach Channel
+         $approach_channel
+     (2) Turning Basin
+         $turning_basin
+     (3) Depth Limitations
+         $depth_limitations
+
+  b. Environmental Conditions
+     (1) Tides
+         $tidal_data
+     (2) Currents
+         $current_data
+     (3) Weather Effects
+         $weather_effects
+
+  4. PORT OPERATIONS
+  ----------------
+  a. Current Status
+     (1) Operational Capacity
+         $operational_capacity
+     (2) Damage Assessment
+         $damage_assessment
+     (3) Security Status
+         $security_status
+
+  b. Required Improvements
+     (1) Immediate Repairs
+         $immediate_repairs
+     (2) Enhancement Requirements
+         $enhancement_requirements
+     (3) Force Protection Requirements
+         $force_protection_reqs
+
+  5. SUPPORT FACILITIES
+  -------------------
+  a. Transportation Network
+     (1) Road Access
+         $road_access
+     (2) Rail Connections
+         $rail_connections
+     (3) Staging Areas
+         $staging_areas
+
+  b. Port Services
+     (1) Power Supply
+         $power_supply
+     (2) Water Supply
+         $water_supply
+     (3) Fuel Storage
+         $fuel_storage
+     (4) Communications
+         $communications
+
+  6. OPERATIONAL CONSIDERATIONS
+  ---------------------------
+  a. Port Capacity
+     (1) Throughput Capacity
+         $throughput_capacity
+     (2) Berthing Schedule
+         $berthing_schedule
+     (3) Storage Capacity
+         $storage_capacity
+
+  b. Port Security
+     (1) Access Control
+         $access_control
+     (2) Waterside Security
+         $waterside_security
+     (3) Critical Infrastructure
+         $critical_infrastructure
+
+  7. SUPPORTING INFORMATION
+  -----------------------
+  a. Port Layout Diagrams
+     $port_diagrams
+
+  b. Depth Charts
+     $depth_charts
+
+  c. Tide Tables
+     $tide_tables
+
+variables:
+  - operation_name
+  - references
+  - time_zone
+  - purpose
+  - berth_locations
+  - berth_dimensions
+  - berth_depths
+  - berth_capacity
+  - open_storage
+  - covered_storage
+  - special_storage
+  - crane_details
+  - mhe_details
+  - roro_facilities
+  - approach_channel
+  - turning_basin
+  - depth_limitations
+  - tidal_data
+  - current_data
+  - weather_effects
+  - operational_capacity
+  - damage_assessment
+  - security_status
+  - immediate_repairs
+  - enhancement_requirements
+  - force_protection_reqs
+  - road_access
+  - rail_connections
+  - staging_areas
+  - power_supply
+  - water_supply
+  - fuel_storage
+  - communications
+  - throughput_capacity
+  - berthing_schedule
+  - storage_capacity
+  - access_control
+  - waterside_security
+  - critical_infrastructure
+  - port_diagrams
+  - depth_charts
+  - tide_tables

@@ -1,0 +1,14 @@
+template: |
+  Based on the provided information, here is a capability assessment:
+
+  $entity has the following capabilities:
+  $capabilities
+
+  Confidence in this assessment: $confidence
+  Source: $source
+
+variables:
+  - entity
+  - capabilities
+  - confidence
+  - source
